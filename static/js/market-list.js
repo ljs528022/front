@@ -2,6 +2,9 @@ const regionBoxes = document.querySelectorAll(".category-each-box");
 const tabButtons = document.querySelectorAll(".tab-button");
 const filterBox = document.querySelector(".filter-combobox");
 const orderbyBox = document.querySelector(".orderby-box");
+const heartButtons = document.querySelectorAll(".like-button");
+const modal = document.querySelector(".like-modal-content");
+const likes = heartButtons.firstElementChild;
 
 // 1. 펼치고 닫고, 
 // a를 펼치려고 클릭했을때, b가 펼쳐져있는걸 닫아버림
@@ -34,3 +37,22 @@ document.addEventListener("click", (e) => {
 });
 
 // 4. 찜버튼 클릭
+heartButtons.forEach((heart) => {
+    heart.addEventListener("click", (e) => {
+        likes.forEach((like) => {
+            like.style.color = rgb(248, 100, 83);
+        });
+    });
+});
+
+let modalCheck;
+
+const showWarnModal = (modalMessage) => {
+    modalCheck = false;
+    document.getElementById("content-wrap").innerHTML = modalMessage;
+    document.querySelector("div.warn-modal").style.animation = "popUp 0.5s";
+    document.querySelector("div.modal").style.display = "flex";
+    setTimeout(() => {
+        modalCheck = true;
+    }, 500);
+};
