@@ -1,0 +1,485 @@
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Pretendard";
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css') format('font-woff2');
+}
+
+html {
+    scrollbar-gutter: stable;
+    line-height: 1.5;
+    tab-size: 4;
+    font-family: "Pretendard", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-variation-settings: normal;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: inherit;
+}
+
+main {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: none;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.region-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+*,
+:after,
+:before {
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.category-container {
+    max-width: 1160px;
+    width: 100%;
+    position: relative;
+    padding: 20px 0px;
+    margin-bottom: 10px;
+}
+
+.region-list {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1160px;
+    width: 100%;
+    gap: 10px;
+}
+
+.category-each-box {
+    position: relative;
+    min-width: 49px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 0px 3px;
+    cursor: pointer;
+    width: 63px;
+    border: 1px solid #e4e4e4;
+    border-radius: 16px;
+    transition: all 0.3s 0s;
+}
+
+.category-each-box:hover,
+.market-category:hover,
+.dropdown-market:hover {
+    background-color: #FFB74D !important;
+    border-color: #FFB74D !important;
+}
+
+.selected {
+    background-color: blanchedalmond;
+    border-color: blanchedalmond;
+    font-weight: 600;
+}
+
+.region-text {
+    margin-top: 1px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
+    font-size: 13px;
+    color: rgb(61, 61, 61);
+}
+
+.name-arrow-box {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+
+.tab-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tab-arrow {
+    font-size: 10px;
+    color: #8c8c8c;
+    margin-left: 4px;
+    transition: all 0.3s 0s;
+}
+
+.divider-wrapper {
+    margin: 0px auto;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.divider {
+    padding: 0px 1%;
+    margin: 0px 0px 10px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.selected-region-in-divider {
+    display: flex;
+    font-weight: bold;
+    font-size: 26px;
+    font-family: inherit;
+    color: #37474F;
+    padding: 0px 0px 20px;
+}
+
+.count-orderby-button-box {
+    display: flex;
+    position: relative;
+}
+
+.market-count span {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #37474F;
+}
+
+.orderby-box {
+    /* display: flex; */
+    /* width: 70px;
+    height: 27px;
+    padding: 7px 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; */
+    position: absolute;
+    right: 0px;
+    bottom: -18px;
+    z-index: 1;
+}
+
+.orderby {
+    position: relative;
+
+}
+
+.combobox-opener {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 27px;
+    background: transparent;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: auto;
+    color: rgb(61, 61, 61);
+    height: inherit;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.combobox-opener span {
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    padding: 0px 24px 0px 16px;
+}
+
+.combobox-arrow {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-style: normal;
+    display: block !important;
+    width: 8px !important;
+    height: 100% !important;
+    margin: 0px !important;
+}
+
+.combobox-arrow::before {
+    content: "▼";
+    line-height: inherit;
+    display: block;
+    font-size: 8px;
+}
+
+.filter-combo {
+    font-size: 1rem;
+    height: 34px;
+    line-height: 34px;
+}
+
+.filter-combo:hover {
+    background: rgb(245, 245, 245);
+}
+
+.selected-filter {
+    font-weight: bold;
+    color: rgb(250, 101, 99);
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px 16px 0px 12px;
+    min-width: 130px;
+    font-size: 1rem;
+    height: 34px;
+    line-height: 34px;
+}
+
+.nonselected-filter {
+    font-weight: normal;
+    color: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0px 16px 0px 12px;
+    min-width: 130px;
+    font-size: 1rem;
+    height: 34px;
+    line-height: 34px;
+}
+
+.market-category-wrapper {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* 축산물 농산물 등등으로 분류버튼 */
+.market-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 3px;
+    cursor: pointer;
+    border: 1px solid #e4e4e4;
+    border-radius: 16px;
+    transition: all 0.3s 0s;
+    min-width: 66px;
+    height: 25px;
+    width: 70px;
+    margin-top: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0px -10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.market-card-wrapper {
+    min-width: 136px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s 0s;
+    padding: 20px 10px 5px;
+    width: 25%;
+}
+
+.each-card {
+    width: 100%;
+}
+
+.card-image {
+    transition: all 0.2s 0s;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image:hover {
+    transform: scale(1.02);
+}
+
+.card-image-wrap {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+}
+
+.card-image-wrap img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.like-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: 2px;
+    right: 2px;
+    z-index: 99;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+/* 카드의 시장의 분류(축산,농산 등등) */
+.card-market-category {
+    font-size: 12px;
+    color: #FF6F00;
+    font-weight: 600;
+}
+
+.card-market-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c1c1c;
+    line-height: 1.3;
+}
+
+.card-description {
+    font-size: 13px;
+    height: 58.5px;
+    color: #757575;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-info-line {
+    margin: 7px 0px;
+    width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.card-guide {
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.guide-location,
+.guide-hour {
+    display: flex;
+    gap: 40px;
+    margin: 2px 0px;
+}
+
+.location,
+.hours {
+    width: 80px;
+    color: #757575;
+}
+
+.market-location,
+.card-business-hour {
+    color: #1c1c1c;
+    font-size: 13px;
+}
+
+.filter-combobox {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px;
+    border-radius: 4px;
+    padding: 4px 0px;
+    color: rgb(61, 61, 61);
+    top: 35px;
+    left: auto;
+    right: 0px;
+}
