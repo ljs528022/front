@@ -84,13 +84,15 @@ html {
     scrollbar-gutter: stable;
     line-height: 1.5;
     tab-size: 4;
-    font-family: "Pretendard", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: sans-serif;
     font-variation-settings: normal;
     overflow-y: scroll;
 }
 
 body {
-    font-family: inherit;
+    font-family: "Pretendard";
+    line-height: inherit;
+    margin: 0;
 }
 
 main {
@@ -350,14 +352,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 3px;
+    padding: 3px 5px;
     cursor: pointer;
     border: 1px solid #e4e4e4;
     border-radius: 16px;
     transition: all 0.3s 0s;
     min-width: 66px;
-    height: 25px;
-    width: 70px;
+    height: 30px;
+    width: 80px;
     margin-top: 20px;
     font-size: 13px;
     text-align: center;
@@ -511,6 +513,63 @@ button {
     right: 0px;
 }
 
+.tab-button {
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    border: 1px solid #e4e4e4;
+    width: 310px;
+    top: 120%;
+    left: 0;
+    background-color: #ffffff;
+    gap: 8px;
+    padding: 8px;
+    z-index: 99;
+}
+
+.dropdown-market {
+    background-color: rgb(251, 248, 248);
+    padding: 6px 4px;
+    min-width: 66px;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e4e4e4;
+}
+
+.dropdown-market.selected {
+    background-color: blanchedalmond;
+    border-color: blanchedalmond;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.category-each-box.clicked .tab-button {
+    display: flex;
+}
+
+.category-each-box.clicked {
+    background-color: #FFB74D;
+    border-color: #FFB74D;
+}
+
+.category-each-box.clicked .name-arrow-box .tab-arrow {
+    transform: rotate(180deg);
+}
+
+.tab-button {
+    cursor: default;
+}
+
+.filter-combobox.clicked {
+    display: flex;
+}
+
 div.modal {
     display: none;
     position: fixed;
@@ -537,3 +596,4 @@ div.like-modal {
 div#content-wrap span{
     display: block;
 }
+
