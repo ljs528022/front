@@ -176,10 +176,10 @@ audio, canvas, embed, iframe, img, object, svg, video {
     fill: rgb(255, 255, 255);
 }
 
-/* 배너 밑 추천 상품 부분 */
-.Recommand-Items-Container {
+/* main 상단 추천 상품 부분 */
+.Items-Container.Recommand {
     padding: 0px;
-    margin: 0px -6px;
+    margin: 0px auto;
     position: relative;
     font-size: 14px;
     line-height: 24px;
@@ -189,7 +189,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     color: #3d3d3d;
 }
 
-.Recommand-Items-ListTitle {
+.Items-ListTitle.Recommand {
     padding-left: 7px;
     padding: 0px;
     font-size: 20px;
@@ -204,16 +204,64 @@ audio, canvas, embed, iframe, img, object, svg, video {
     margin: 16px 0px;
 }
 
-.Recommand-Items-CardList {
+.Items-CardList.Middle {
     padding: 0;
     width: 100%;
+}
+
+/* main 중간 상품 목록 부분 */
+.MainItem-Section {
+    max-width: 1160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 44px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Items-Container.Middle {
+    padding: 0px;
+    margin: 0px auto;
+    position: relative;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    background: #fff;
+    color: #3d3d3d;
+}
+
+.Items-ListTitle.Middle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 16px 0px;
+    padding: 0px;
+    padding-left: 7px;
+    justify-content: space-between;
+}
+
+.Items-ListTitle-Title {
+    color: rgb(28, 28, 28);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.025em;
+}
+
+.Items-ListTitle-ViewAll {
+    color: rgb(109, 109, 109);
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: -0.025em;
 }
 
 /* 상품 목록 카드 부분 */
 .CardList-Section {
     margin: 0px;
     padding: 0px;
-    column-gap: 60px;
+    column-gap: 40px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -223,7 +271,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
 /* 추천 상품 목록 부분 */
 .Card-Container {
     padding-bottom: 40px !important;
-    width: 25%;
+    width: 150px;
     padding: 0px 7px 0px 0px;
 }
 
@@ -606,16 +654,195 @@ audio, canvas, embed, iframe, img, object, svg, video {
 
 }
 
+.ContentInfo-Wrapper a {
+    color: rgb(13, 13, 13);
+}
+
 .ContentInfo-Thumbnail {
-    
+    margin-bottom: 28px;
+}
+
+.Thumbnail-Container {
+    position: relative;
+    width: 100%;
+    max-height: 360px;
+    padding: 0px;
+}
+
+.Thumbnail-Image {
+    display: block;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.TextInfo-Container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 12px;
+    padding: 0px;
+}
+
+.TextInfo-Title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.TextInfo-Description {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.ContentInfo-ViewAllBtn {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 0px auto;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 60px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.ContentInfo-Icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ContentInfo-Icon svg {
+    width: 1em;
+    height: 1em;
 }
 
 .ContentList-Wrapper {
     position: relative;
     width: 764px;
-    padding: 0xp;
+    padding: 0px;
     margin-bottom: 0px;
 }
+
+.ContentList-Container {
+    position: relative;
+    max-width: 1160px;
+    margin: 0px auto;
+    width: 100%;
+    padding: 0px;
+    z-index: 2;
+}
+
+.ContentList-Slider {
+    position: relative;
+}
+
+.ContentList-Slider-Container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+}
+
+.ContentList-Slider-Wrapper .swapper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+    margin-left: auto;
+}
+
+.ContentList-Slider-Wrapper .swapper-slide {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ContentList-ItemList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ContentList-Pagination.left {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    position: absolute;
+    border: 0px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 4px 5px;
+    background: white;
+    color: rgb(61, 61, 61);
+    align-items: center;
+    justify-content: center;
+    outline: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.5s;
+    left: auto;
+    right: 100%;
+    margin-right: 16px;
+    top: 50%;
+}
+
+.ContentList-Pagination.right {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 0px;
+    position: absolute;
+    border: 0px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px, rgba(0, 0, 0, 0.1) 0px 4px 5px;
+    background: white;
+    color: rgb(61, 61, 61);
+    align-items: center;
+    justify-content: center;
+    outline: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.5s;
+    left: 100%;
+    right: auto;
+    margin-left: 5px;
+    top: 50%;
+}
+
+.ContentList-Pagination:disabled svg {
+    opacity: 0.2;
+}
+
+.Pagination-NavBtn {
+    display: inline-flex;
+    align-self: center;
+}
+
+.left svg {
+    font-size: 16px;
+    fill: rgb(13, 13, 13);
+    margin-right: 2px;
+    width: 1em;
+    height: 1em;
+}
+
+.right svg {
+    font-size: 16px;
+    fill: rgb(13, 13, 13);
+    margin-left: 2px;
+    width: 1em;
+    height: 1em;
+}
+
 
 /* 푸터 추가 css */
 .Footer {

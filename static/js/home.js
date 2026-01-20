@@ -1,3 +1,4 @@
+// 배너들 + 페이지네이션 버튼
 const bannerWrapper = document.querySelector(".Banner-Slider-Wrapper");
 const banners = document.querySelectorAll(".Banner-Content-Link");
 const firstBanner = document.createElement("div");
@@ -5,9 +6,6 @@ const lastBanner = document.createElement("div");
 const arrows = document.querySelectorAll(".Slider-Button");
 const pagination = document.querySelector(".Banner-Slider-Pagination");
 const curruntPage = pagination.firstElementChild;
-
-// 찜 버튼
-const likeButtons = document.querySelectorAll(".like-Button");
 
 // ---------- 배너 부분 ----------
 // 배너 순서용 값
@@ -99,7 +97,49 @@ arrows.forEach((arrow) => {
 });
 // ------------------------------------------
 
-// ----- 찜 버튼 부분 -----------------------
+// ----- 상품 리스트 페이지 버튼 부분 ---------
+// 페이지 + 페이지네이션 버튼
+const itemPageWrapper = document.querySelector(".swapper-container");
+const itemPages = document.querySelectorAll(".ContentList-ItemList");
+const leftBtn = document.querySelector(".ContentList-Pagination.left");
+const rightBtn = document.querySelector(".ContentList-Pagination.right");
+
+// 페이지 순서값
+let pageCount = 0;
+let maxPage = itemPages.length;
+
+// 처음에 왼쪽 버튼 비활성화
+leftBtn.disabled = true;
+
+// Pagination 기능
+// 왼쪽 버튼
+leftBtn.addEventListener("click", (e) => {
+    pageCount--;
+    rightBtn.disabled = false;
+    itemPageWrapper.style.transform = `translate(-${764 * pageCount}px)`;
+    itemPageWrapper.style.transition = `transform 0.5s`;
+
+    if (pageCount <= 0) {
+        leftBtn.disabled = true;
+    }
+});
+
+// 오른쪽 버튼
+rightBtn.addEventListener("click", (e) => {
+    pageCount++;
+    leftBtn.disabled = false;
+    itemPageWrapper.style.transform = `translate(-${764 * pageCount}px)`;
+    itemPageWrapper.style.transition = `transform 0.5s`;
+
+    if (pageCount >= maxPage - 1) {
+        rightBtn.disabled = true;
+    }
+});
+
+// ----- 찜 버튼 부분 ------------------------
+// 찜 버튼
+const likeButtons = document.querySelectorAll(".like-Button");
+
 // 찜 버튼 누르기 기능
 likeButtons.forEach((like) => {
     like.addEventListener("click", (e) => {
