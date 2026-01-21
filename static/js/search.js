@@ -1,5 +1,12 @@
 // 연관 검색어 버튼 기능
 // 누르면 해당 검색어로 검색
+const searchChips = document.querySelectorAll(".SearchRelation-Chip");
+
+searchChips.forEach((chip) => {
+    chip.addEventListener("click", (e) => {
+        // DB에 해당 검색어 조회 로직
+    });
+});
 
 // 임박 마감 버튼 누르면 스타일 변경
 const clearanceBtn = document.querySelector(".Filter-Option.Clearance");
@@ -86,6 +93,9 @@ likeButtons.forEach((like) => {
     });
 });
 // -----------------------------------------
+
+// 무한 스크롤 부분 -------------------------
+// 일정 수준 스크롤이 내려가면 상품들을 더 불러와야 함.
 
 // 페이지를 클릭, 스크롤 하면 드롭다운 비활성화
 document.addEventListener("scroll", (e) => {});
