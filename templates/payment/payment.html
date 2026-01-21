@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>결제</title>
-    <link rel="stylesheet" href="../static/css/payment-payment.css">
+    <link rel="stylesheet" href="/static/css/payment/payment.css">
 </head>
 <body>
     <div id="react-view" class="entire">
@@ -13,105 +13,246 @@
                 <span>최상위로</span>
             </button>
             <div class="ScrollTop__Styled Icon">
-                <svg height="18px" version="1.1" viewBox="0 0 22 18" width="22px" xmlns="http://www.w3.org/2000/svg"> 
-                    <g fill-rule="evennodd" id="Page-1" stroke="none">
+                <svg
+                    width="22px"
+                    height="18px"
+                    viewBox="0 0 22 18"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g fill-rule="evennodd" stroke="none">
                         <g id="jump-to-top" transform="translate(-1.000000, 0.000000)">
-                            <path d="M12.006,5.987 L22.75,16.437 C22.9,16.587 23,16.837 23,17.087 C23,17.338 22.9,17.587 22.7,17.737 C22.35,18.087 21.75,18.087 21.35,17.737 L12.006,8.587 L2.611,17.737 C2.261,18.087 1.662,18.087 1.262,17.737 C0.912,17.387 0.912,16.787 1.262,16.437 L12.006,5.987 L12.006,5.987 Z M22.175,0 C22.631,0 23,0.37 23,0.825 L23,0.877 C23,1.332 22.63,1.702 22.175,1.702 L1.825,1.702 C1.369,1.702 1,1.332 1,0.877 L1,0.825 C1,0.369 1.37,0 1.825,0 L22.175,0 Z" id="Shape"></path>
+                            <path
+                                d="M12.006,5.987 L22.75,16.437
+                                   C22.9,16.587 23,16.837 23,17.087
+                                   C23,17.338 22.9,17.587 22.7,17.737
+                                   C22.35,18.087 21.75,18.087 21.35,17.737
+                                   L12.006,8.587 L2.611,17.737
+                                   C2.261,18.087 1.662,18.087 1.262,17.737
+                                   C0.912,17.387 0.912,16.787 1.262,16.437
+                                   L12.006,5.987 Z
+                                   M22.175,0
+                                   C22.631,0 23,0.37 23,0.825
+                                   L23,0.877
+                                   C23,1.332 22.63,1.702 22.175,1.702
+                                   L1.825,1.702
+                                   C1.369,1.702 1,1.332 1,0.877
+                                   L1,0.825
+                                   C1,0.369 1.37,0 1.825,0
+                                   L22.175,0 Z"
+                            />
                         </g>
                     </g>
                 </svg>
             </div>
         </div>
-        <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section> 
+
+        <section
+            aria-label="Notifications alt+T"
+            tabindex="-1"
+            aria-live="polite"
+            aria-relevant="additions text"
+            aria-atomic="false"
+        ></section>
+
         <main class="MainLayout__Wrapper background">
-            <div class="Pledge__1 Wrapp"> 
+            <div class="Pledge__1 Wrapp">
                 <div class="Pledge__2 Body">
                     <div class="Project__Section ProjectWrapper">
                         <section class="Project__a IntroWrapper">
                             <a href="/apple">
-                                <img alt="사과 이미지" src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyL2ViMGFjZmIyLTBjODQtNGE5OS05MzE3LTQxYmExZTA5MTkzYS80ZjYwNTlkNi1iY2JiLTRhYjgtYjY0YS1hOWM5NTllMjZmNjUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0NjUsImhlaWdodCI6NDY1LCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWUsImZpdCI6bnVsbH0sInJvdW5kQ3JvcCI6ZmFsc2UsInJvdGF0ZSI6bnVsbH19" class="Product_image apple">
+                                <img
+                                    class="Product_image apple"
+                                    alt="사과 이미지"
+                                    src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyL2ViMGFjZmIyLTBjODQtNGE5OS05MzE3LTQxYmExZTA5MTkzYS80ZjYwNTlkNi1iY2JiLTRhYjgtYjY0YS1hOWM5NTllMjZmNjUucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0NjUsImhlaWdodCI6NDY1LCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWUsImZpdCI6bnVsbH0sInJvdW5kQ3JvcCI6ZmFsc2UsInJvdGF0ZSI6bnVsbH19">
                             </a>
+
                             <div class="Project__ContentsWrapper title">
                                 <span class="Project__Intro shopname">
-                                과일
-                                <span>|</span>
-                                미래타운제1종합시장.
+                                    과일 <span>|</span> 미래타운제1종합시장.
                                 </span>
-                        <a href="/shop">
-                           <p class="Project__a Titleapple">[FreshFruits] 프리미엄 사과 실속세트 (6과)</p>
-                        </a>
-                        <div class="Project__Detail Container ">
-                            <strong class="MoneyInfo__Account count">
-                            58,500
-                            원
-                            </strong>
-                            <span class="MoneyInfo__Achievement">
-                                10% 할인
-                            </span>
-                            <span class="MoneyInfo__Dot-sc-ghyw4o-2 iRUFGO">•</span>
-                            <span class="MoneyInfo__State">결제 완료</span>
-                        </div>
+
+                                <a href="/shop">
+                                    <p class="Project__a Titleapple">
+                                        [FreshFruits] 프리미엄 사과 실속세트 (6과)
+                                    </p>
+                                </a>
+
+                                <div class="Project__Detail Container">
+                                    <strong class="MoneyInfo__Account count">
+                                        58,500원
+                                    </strong>
+                                    <span class="MoneyInfo__Achievement">10% 할인</span>
+                                    <span class="MoneyInfo__Dot-sc-ghyw4o-2 iRUFGO">•</span>
+                                    <span class="MoneyInfo__State">결제 완료</span>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                    </section>
-                    
-                    </div>
-                    <div class="Container__Container Component Styled__columnWrapper Pledge__Pledge PageWrapper">
-                        <div class="Pledge__LeftSide Container ">
-                            <div class="Pledge__CardWrapper Pledge__RewardWrapper">
-                                <div class="Setting__FormWrapper Reward__Section RewardWrapper">
-                                    <div class="Setting__Form FormHeader">
-                                        <p class="Setting__Form FormTitle">선물 정보</p>
+
+                    <div class="Container__ContainerComponent-sc-1ql5ckp-0 bOjKOH StyledTBB__column2Wrapper-sc-757i6a-2 Pledge__PledgePageWrapper-sc-1cwkqwg-5 BgVfT NLrsy">
+                        <div class="Pledge__LeftSideContainer-sc-1cwkqwg-6 jkMqrx container">
+                            <div class="Pledge__CardWrapper-sc-1cwkqwg-9 Pledge__RewardWrapper-sc-1cwkqwg-10 eeBRDs bLqfkh">
+                                <div class="SettingForm__Wrapper-sc-1ygj7as-0 cORMrX RewardSection__RewardWrapper-sc-13loojw-0 cyYYNw">
+                                    <div class="SettingForm__FormHeader-sc-1ygj7as-1 fOubCv fnt-p1">
+                                        <p class="SettingForm__FormTitle-sc-1ygj7as-2 hLdtkm">업체 배송</p>
                                     </div>
-                                    <div class="RoundedWrapper__Wrapper RewardSection__Flex RoundedWrapper">
+
+                                    <div class="RoundedWrapper__Wrapper-sc-1me1i3o-0 kGdLSK RewardSection__FlexRoundedWrapper-sc-13loojw-1 hmYlQy">
                                         <table>
                                             <tbody>
                                                 <tr>
-                                                    <th>선물 구성</th>
-                                                    <td class="Reward__Composition RewardContainer">
-                                                        <div>
-                                                            <span class="Reward__Composition RewardLabel">선물 없이 후원하기</span>
-                                                        </div>
+                                                    <th>가게 이름</th>
+                                                    <td class="RewardComposition__RewardContainer-sc-1gzqoea-11 bKvTky">
+                                                        <span class="RewardComposition__RewardLabel-sc-1gzqoea-1 dJBfNH">
+                                                            미호 유통
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                 <tr>
+                                                    <th>상품 이름</th>
+                                                    <td class="RewardComposition__RewardContainer-sc-1gzqoea-11 bKvTky">
+                                                        <span class="RewardComposition__RewardLabel-sc-1gzqoea-1 dJBfNH">
+                                                            [FreshFruits] 프리미엄 사과 실속세트 [6과]
+                                                        </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>선물 금액</th>
-                                                    <td>
-                                                        1,000
-                                                        원
+                                                    <th>상품 가격</th>
+                                                    <td class="RewardComposition__RewardContainer-sc-1gzqoea-11 bKvTky">
+                                                        <span class="RewardComposition__RewardLabel-sc-1gzqoea-1 dJBfNH">
+                                                            53,900원
+                                                        </span>
                                                     </td>
                                                 </tr>
+                                                    <th>배송비</th>
+                                                    <td>2,000원</td>
                                             </tbody>
                                         </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Pledge__CardWrapper-sc-1cwkqwg-9 eeBRDs">
+                                <div class="SettingForm__Wrapper-sc-1ygj7as-0 cORMrX">
+                                    <div class="SettingForm__FormHeader-sc-1ygj7as-1 fOubCv fnt-p1">
+                                        <p class="SettingForm__FormTitle-sc-1ygj7as-2 hLdtkm">
+                                            주문자 정보
+                                        </p>
+                                    </div>
+
+                                    <div class="RoundedWrapper__Wrapper-sc-1me1i3o-0 kGdLSK">
+                                        <div class="style__BackerWrapper-sc-1kj69e-0 gOKAJS">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="name">이름</th>
+                                                        <td style="color: rgb(61, 61, 61); padding: 0">
+                                                            홍길동
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="phonenumber">연락처</th>
+                                                        <td style="color: rgb(61, 61, 61); padding: 0">
+                                                            010-5129-5170
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>이메일</th>
+                                                        <td style="color : rgb(61, 61, 61);">
+                                                        <div>honggildong@email.com</div>
+                                                    </td>
+                                                    </tr>
+                                                   
+
+
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Pledge__CardWrapper-sc-1cwkqwg-9 eeBRDs"></div>
+                            <div class="Pledge__CardWrapper-sc-1cwkqwg-9 eeBRDs">
+                                <div class="SettingForm__Wrapper-sc-1ygj7as-0 cORMrX">
+                                    <div class="SettingForm__FormHeader-sc-1ygj7as-1 fOubCv fnt-p1">
+                                        <p class="SettingForm__FormTitle-sc-1ygj7as-2 hLdtkm">배송지 정보</p>
+                                    </div>
+                                    <div class="RoundedWrapper__Wrapper-sc-1me1i3o-0 kGdLSK">
+                                        <div class="style__Wrapper-sc-rtzbmh-0 ekGljb">
+                                            <div class="style__ContentHeader-sc-rtzbmh-2 eTColg">받으실 분</div>
+                                            <div class="style__RightWrap-sc-rtzbmh-3 laIreb">
+                                                <div class="style__ContentBody-sc-rtzbmh-4 dAbsoZ">
+                                                    <p class="style__ContentDesc-sc-rtzbmh-5 iwwFWX">
+                                                        홍길동
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="Pledge__CardWrapper-sc-1cwkqwg-9 eeBRDs">
                                 <div class="SettingForm__Wrapper-sc-1ygj7as-0 cORMrX">
                                     <div class="SettingForm__FormHeader-sc-1ygj7as-1 fOubCv fnt-p1">
-                                       <p class="SettingForm__FormTitle-sc-1ygj7as-2 hLdtkm">
-                                        주문자 정보
-                                       </p>
-                                </div>
-                                <div class="RoundedWrapper__Wrapper-sc-1me1i3o-0 kGdLSK">
-                                    <div class="style__BackerWrapper-sc-1kj69e-0 gOKAJS">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <th>연락처</th>
-                                                    <td style="color: rgb(61, 61, 61); padding: 0px;">010-5129-5170
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <p class="SettingForm__FormTitle-sc-1ygj7as-2 hLdtkm">결제 수단</p>
+                                    </div>
+                                    <div class="RoundedWrapper__Wrapper-sc-1me1i3o-0 kGdLSK">
+                                        <div class="RadioSelector__Wrapper-sc-1gtvrlw-0 duZJFK PaymentRadioSelector__StyledRadioSelector-sc-a4ockm-0 hFNMZa flex">
+                                            <div class="ListElementComponent__Wrapper-sc-1qe5g22-0 kgSInJ PaymentRadioSelector__StyledListElementComponent-sc-a4ockm-1 hbMPtL" data-testid="list-0" type="payment">
+                                                <div class="RadioSelector__StyledRadio-sc-1gtvrlw-3 fYMwrl radioComponent">
+                                                    <label class="RadioSelector__StyledLabel-sc-1gtvrlw-1 kKqGkI">
+                                                        <div class="RadioSelector__StyledRadioWrapper-sc-1gtvrlw-4 bEYdfr radioComponent-wrapper">
+                                                            <input name="paymentType" type="radio" class="RadioSelector__StyledInput-sc-1gtvrlw-2 kbWbdT" checked>
+                                                        </div>
+                                                        <div class="PaymentRadioSelector__Label-sc-a4ockm-2 gfjoLX">
+                                                            카드 간편결제
+                                                            <span class="PaymentRadioSelector__Tag-sc-a4ockm-3 jTPxtl">할부 가능</span>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="ListElementComponent__Wrapper-sc-1qe5g22-0 kgSInJ PaymentRadioSelector__StyledListElementComponent-sc-a4ockm-1 hbMPtL" data-testid="list-1" type="payment">
+                                                <div class="RadioSelector__StyledRadio-sc-1gtvrlw-3 fYMwrl radioComponent">
+                                                    <label class="RadioSelector__StyledLabel-sc-1gtvrlw-1 kKqGkI">
+                                                        <div class="RadioSelector__StyledRadioWrapper-sc-1gtvrlw-4 zzbKT radioComponent-wrapper">
+                                                            <input name="paymentType" type="radio" class="RadioSelector__StyledInput-sc-1gtvrlw-2 kbWbdT">
+                                                        </div>
+                                                        <div class="PaymentRadioSelector__Label-sc-a4ockm-2 gfjoLX">네이버 페이(Npay)</div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div clasas="ListElementComponent__Wrapper-sc-1qe5g22-0 kgSInJ PaymentRadioSelector__StyledListElementComponent-sc-a4ockm-1 hbMPtL" data-testid="list-2" type="payment">
+                                                <div class="RadioSelector__StyledRadio-sc-1gtvrlw-3 fYMwrl radioComponent">
+                                                    <label class="RadioSelector__StyledLabel-sc-1gtvrlw-1 kKqGkI">
+                                                        <div class="RadioSelector__StyledRadioWrapper-sc-1gtvrlw-4 zzbKT radioComponent-wrapper">
+                                                            <input name="paymentType" type="radio" class="RadioSelector__StyledInput-sc-1gtvrlw-2 kbWbdT">
+                                                        </div>
+                                                        <div class="PaymentRadioSelector__Label-sc-a4ockm-2 gfjoLX">계좌이체</div>
+                                                    </label>
+                                                </div>
+                                            </div>     
+                                        </div>
+                                        <div class="style__AddButton-sc-1mhwlru-0 gpQzhZ">
+                                            <span>
+                                                +
+                                                카드
+                                                등록
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                       
                     </div>
                 </div>
             </div>
-        </main>  
+        </main>
     </div>
+
+    <script src="../static/js/payment.js"></script>
 </body>
-<script src="../static/js/payment.js"></script>
 </html>

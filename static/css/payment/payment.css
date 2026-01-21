@@ -441,15 +441,128 @@ blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     z-index: 1;   
 }
 /**/
-.PageWrapper{
+.NLrsy{
     padding: 24px 0px;
     flex-direction: row; 
     margin-bottom: 7px;
     min-height: 640px;   
 }
+.BgVfT {
+    display: flex;
+    align-items: flex-start;
+}
+.bOjKOH {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0px auto;
+    width: 100%;
+}
+.NLrsy .container {
+    width: 672px;
+    margin: 0px 32px 0px 0px;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+}
+.jkMqrx {
+    padding-top: 0px !important;
+}
+.NLrsy .container > div {
+    margin: 0px 0px 16px;
+}
+.eeBRDs {
+    width: 100%;
+    margin-bottom: 14px !important;
+    border-bottom: none !important;
+}
+.cyYYNw {
+    position: relative;
+}
+.cORMrX {
+    padding: 0px 0px 18px;
+}
+.fOubCv {
+    display: flex;
+    margin: 0px 0px 12px;
+}
+.hLdtkm {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 120%;
+    color: rgb(28, 28, 28);
+}
+blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    margin: 0;
+}
 
+.hmYlQy {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font: 500 14px / 22px Pretendard, sans-serif;
+}
+.kGdLSK {
+    border-radius: 4px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-width: 1px 1px;
+    border-style: solid;
+    border-color: rgb(228, 228, 228);
+    border-image: initial;
+}
+.eeBRDs table {
+    width: 100%;
+    margin: 16px 0px;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: inherit;
+    text-indent: 0;
+}
+.bLqfkh table tbody th {
+    width: 138px;
+}
 
-.Component{
+.bKvTky {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.dJBfNH {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+.kGdLSK::after {
+    content: "";
+    min-height: inherit;
+    font-size: 0px;
+}
+.eeBRDs table tbody th { 
+    padding-left: 40px; 
+    padding-right: 20px; 
+    vertical-align: top; 
+    text-align: left; 
+    padding: 4px 0px 4px 16px; 
+     
+    
+}
+
+/**/
+
+/* .Component{
     max-width: 1160px;
     margin: 0px auto;
     width: 100%;        
@@ -657,4 +770,24 @@ td {
     width: 100%;
     margin-bottom: 14px !important;
     border-bottom: none !important;    
+} */
+
+
+/*이름: 홍길동*/
+.gOKAJS td {
+    color: rgb(109, 109, 109) !important;
+}
+.eeBRDs table tbody th {
+        width: 138px;
+        padding-left: 20px;
+    }
+.eeBRDs table tbody th {
+    width: 98px;
+    vertical-align: top;
+    text-align: left;
+    padding: 4px 0px 4px 16px;
+}
+
+.eeBRDs table tbody th.name {
+    font-size: 16px 
 }
