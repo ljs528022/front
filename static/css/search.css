@@ -63,7 +63,6 @@ a, div {
     gap: 8px;
     align-items: center;
     flex: 1 1 0%;
-    overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: none;
 }
@@ -117,18 +116,16 @@ a, div {
     align-items: center;
     width: 100%;
     height: 100%;
-    overflow: auto hidden;
 }
 
 .Filter-OptionContainer {
     display: flex;
     padding-left: 0px;
     gap: 10px;
-    overflow-x: auto;
     scrollbar-width: none;
 }
 
-.Filter-Option.Button {
+.Clearance {
     display: flex;
     font-size: 14px;
     font-weight: normal;
@@ -142,6 +139,11 @@ a, div {
     background: white;
     border: 1px solid rgb(228, 228, 228);
     color: rgb(28, 28, 28);  
+    cursor: pointer;
+}
+
+.isClicked {
+    border: 1px solid rgb(28, 28, 28);
 }
 
 .OptionButton-Content {
@@ -174,6 +176,15 @@ a, div {
     font-size: 14px;
     font-weight: normal;
     line-height: 120%;
+    cursor: pointer;
+}
+
+button[name=market] {
+    display: none;
+}
+
+button[name=c-category] {
+    display: none;
 }
 
 .Trigger-Text {
@@ -190,8 +201,133 @@ a, div {
     justify-content: center;
 }
 
-.Trigger-Arrow svg {
+.Trigger-Arrow-svg {
     cursor: pointer;
     width: 14px;
     height: 14px;
+}
+
+.DropDown-Container {
+    position: absolute;
+    display: none;
+    background: white;
+    top: 41px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 175px;
+    height: 200px;
+    overflow-y: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
+    border: 1px solid rgb(240, 240, 240);
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 8px, rgba(0, 0, 0, 0.1) 0px 1px 0px;
+}
+
+.DropDown-Button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(61, 61, 61);
+    font-weight: 400;
+    padding: 0px 0px 0px 19px;
+    width: 100%;
+    height: 44px;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    cursor: pointer;
+}
+
+.DropDown-Button:hover {
+    background: rgb(241, 241, 241);
+}
+
+.isChecked {
+    transform: rotate(180deg);
+}
+
+.clicked {
+    display: block;
+}
+
+/* 검색 결과 상품 목록 부분 */
+.SearchPage-SearchResult {
+    position: relative;
+    width: 1160px;
+    height: auto;
+    min-height: 150px;
+    margin: 0px auto;
+    margin-bottom: 0px;
+}
+
+.InfinityScroll-ResultWrapper {
+    color: rgb(51, 51, 51);
+}
+
+.InfinityScroll-ResultCount {
+    width: 100%;
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0px auto;
+    padding: 16px 20px 12px 0px;
+    letter-spacing: -0.08px;
+}
+
+.InfinityScroll-ResultCount span {
+    color: rgb(255, 87, 87);
+}
+
+.InfinityScroll-ResultItemList {
+    display: flex;
+    width: auto;
+    justify-content: flex-start;
+    margin: 0px -10px;
+    padding: 0px;
+}
+
+/* 검색 결과 상품 카드 부분 */
+.InfinityScroll-ItemCardWrapper {
+    width: 25%;
+    padding: 20px 10px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.ItemCard-Wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    min-width: 136px;
+    transition: width 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transform-origin: center center;
+}
+
+.ItemCard-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.ItemCard-ImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    border-radius: 8px;
+    transform-origin: center center;
+}
+
+.ItemCard-Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s ease-in-out;
+    max-width: 100%;
 }

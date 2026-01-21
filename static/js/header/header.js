@@ -64,8 +64,10 @@ loginButton.addEventListener("click", (e) => {
     // 로그인 버튼 옆 화살표 애니메이션
     if (!isClicked) {
         loginBtnArrow.style.transform = "rotate(180deg)";
+        loginBtnArrow.style.transition = `transform 0.5s`;
     } else {
         loginBtnArrow.style.transform = "rotate(0deg)";
+        loginBtnArrow.style.transition = `transform 0.5s`;
     }
     isClicked = !isClicked;
 });

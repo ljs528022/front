@@ -8,6 +8,7 @@
 <body>
     <main class="Main-Layout">
         <div class="SearchPage-Wrapper">
+            <!-- 검색 결과 정보 부분 -->
             <div class="SearchPage-Container">
                 <!-- 검색 결과 Title 부분 -->
                 <div class="SearchPage-InnerWrapper">
@@ -26,7 +27,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- 검색 결과 필터 부분 -->
@@ -36,7 +36,7 @@
                         <div class="Filter-OptionWrapper">
                             <div class="Filter-OptionContainer">
                                 <!-- 해당 버튼 누르면 '떨이 상품'만 정렬하게 -->
-                                <button type="button" class="Filter-Option Button">
+                                <button name="clearance" type="button" class="Filter-Option Clearance">
                                     <div class="OptionButton-Content">
                                         <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.38779 2.30425C4.55294 1.68264 5.44706 1.68264 5.61221 2.30425C6.12816 4.24621 7.38997 5.93973 9.11463 6.97073C9.51494 7.21003 9.51494 7.78997 9.11463 8.02927C7.38997 9.06027 6.12816 10.7538 5.61221 12.6958C5.44706 13.3174 4.55294 13.3174 4.38779 12.6958C3.87184 10.7538 2.61003 9.06027 0.885371 8.02927C0.485057 7.78997 0.485057 7.21003 0.885371 6.97073C2.61003 5.93973 3.87184 4.24621 4.38779 2.30425Z" fill="url(#paint0_linear_303_99400)"></path><defs><linearGradient id="paint0_linear_303_99400" x1="1.66667" y1="7.5" x2="9.16667" y2="7.5" gradientUnits="userSpaceOnUse"><stop stop-color="#A253DE"></stop><stop offset="1" stop-color="#FF7373"></stop></linearGradient></defs></svg>
                                         <span>임박 마감</span>
@@ -46,37 +46,209 @@
                                 <!-- 지역 선택 드롭다운 -->
                                 <div class="Option-DropDown">
                                     <div class="Option-Trigger">
-                                        <button type="button" class="Trigger-Button">
+                                        <button name="region" type="button" class="Trigger-Button">
                                             <div class="Trigger-Text">
                                                 지역 선택
                                             </div>
                                             <!-- 해당 svg 누르면 180도 회전 해야함  -->
                                             <div class="Trigger-Arrow">
-                                                <svg class="Chip__ArrowDownIcon-sc-ounpx6-1 frXSZc" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
+                                                <svg class="Trigger-Arrow-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
                                             </div>
                                         </button>
+                                        <!-- 지역들 js로 불러오기 -->
+                                        <ul width="175" class="DropDown-Container">
+                                            <li>
+                                                <button type="button" class="DropDown-Button">전체 지역</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">서울</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">경기</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">인천</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">강원</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">충북</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">충남</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">대전</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">경북</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">경남</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">울산</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">부산</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 
                                 <!-- 지역이 선택되면 표시 및 해당 지역 장터 가져오기 -->
                                 <!-- 선택 지역 장터 선택 드롭다운 -->
                                 <div class="Option-DropDown">
-
+                                    <div class="Option-Trigger">
+                                        <button name="market" type="button" class="Trigger-Button">
+                                            <div class="Trigger-Text">
+                                                장터 선택
+                                            </div>
+                                            <!-- 해당 svg 누르면 180도 회전 해야함  -->
+                                            <div class="Trigger-Arrow">
+                                                <svg class="Trigger-Arrow-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
+                                            </div>
+                                        </button>
+                                        <!-- 해당 지역 장터들 js로 불러오기 -->
+                                        <ul width="175" class="DropDown-Container">
+                                            <li>
+                                                <button type="button" class="DropDown-Button">전체 장터</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터1</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터2</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터3</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터4</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터5</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터6</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">장터7</button>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                                 <!-- 상품 대분류 카테고리 드롭다운 -->
                                 <div class="Option-DropDown">
-
+                                    <div class="Option-Trigger">
+                                        <button name="p-category" type="button" class="Trigger-Button">
+                                            <div class="Trigger-Text">
+                                                카테고리
+                                            </div>
+                                            <!-- 해당 svg 누르면 180도 회전 해야함  -->
+                                            <div class="Trigger-Arrow">
+                                                <svg class="Trigger-Arrow-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
+                                            </div>
+                                        </button>
+                                        <!-- 대분류 카테고리 js로 불러오기 -->
+                                        <ul width="175" class="DropDown-Container">
+                                            <li>
+                                                <button type="button" class="DropDown-Button">전체 보기</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">축산물</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">농산물</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">수산물</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">반찬.장류</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">가공식품</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">건강식품</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">생활용품</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">주방용품</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">가전</button>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                                 <!-- 대 분류 카테고리가 선택되면 표시 및 해당 분류의 소분류 가져오기 -->
                                 <!-- 상품 소분류 카테고리 드롭다운 -->
                                 <div class="Option-DropDown">
-
+                                    <div class="Option-Trigger">
+                                        <button name="c-category" type="button" class="Trigger-Button">
+                                            <div class="Trigger-Text">
+                                                세부 카테고리
+                                            </div>
+                                            <!-- 해당 svg 누르면 180도 회전 해야함  -->
+                                            <div class="Trigger-Arrow">
+                                                <svg class="Trigger-Arrow-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
+                                            </div>
+                                        </button>
+                                        <!-- 대분류에 관련된 소분류 카테고리 js로 불러오기 -->
+                                        <ul width="175" class="DropDown-Container">
+                                            <li>
+                                                <button type="button" class="DropDown-Button">세부 1</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">세부 2</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">세부 3</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="DropDown-Button">세부 4</button>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- 검색 결과 상품 목록 부분 -->
+            <div class="SearchPage-SearchResult">
+                <div class="InfinityScroll-ResultWrapper">
+                    <div class="InfinityScroll-ResultCount">
+                        <!-- span 안에 불러온 상품 개수 표시 -->
+                        <span>1,222</span>
+                        개의 상품이 있습니다.
+                    </div>
+                    <!-- 이 안에 상품들 가져와서 뿌려야 함 + 무한 스크롤 -->
+                    <div class="InfinityScroll-ResultItemList">
+                        <!-- 상품 카드 부분 js로 뿌려야 함 -->
+                        <!-- Sample -->
+                        <!--  -->
+                        <div class="InfinityScroll-ItemCardWrapper">
+                            <div class="ItemCard-Wrapper">
+                                <a href="" class="ItemCard-Container">
+                                    <div class="ItemCard-ImageWrapper">
+                                        <img class="ItemCard-Image" src="" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    
                 </div>
             </div>
         </div>
