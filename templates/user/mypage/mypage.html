@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/mypage.css">
+</head>
+<body>
+    <main class="MainLayout-Wrapper">
+        <div class="Mypage-PageComponent">
+            <!-- 헤더 -->
+            <div class="ProfileInfo-Wrapper">
+                <div class="ProfileInfo-InnerWrapper">
+                    <div class="ProfileInfo-Container">
+                        <div class="UserInfo-Wrapper">
+                            <img class="UserInfo-UserAvatarImage" src="../../../static/images/haetsal-jangteo-logo.svg" >
+                            <div class="UserInfo-Content">
+                                <div class="UserInfo-Name">
+                                    <!-- js로 유저 이름 넣어주기 -->
+                                    <div class="UserInfo-username">홍길동</div>
+                                </div>
+                                <div class="UserInfo-OtherWrapper">
+                                    <div class="InfoItem-Wrapper">
+                                        <div class="InfoItem-Container">
+                                            <!-- js에서 받아오기 없으면 "-" -->
+                                            <div class="InfoItem-Title">방문 수</div>
+                                            <div class="InfoItem-Value">-</div>
+                                        </div>
+                                        <!-- 누르면 작성한 후기 상품 보여주기 -->
+                                        <div class="InfoItem-Container clickable">
+                                            <!-- js에서 받아오기 없으면 "-" -->
+                                            <div class="InfoItem-Title">
+                                                작성한 후기
+                                                <svg class="InfoItem-Title-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                            </div>
+                                            <div class="InfoItem-Value">-</div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="InfoItem-Container clickable">
+                                            <!-- js에서 받아오기 없으면 "-" -->
+                                            <div class="InfoItem-Title">
+                                                찜한 상품
+                                                <svg class="InfoItem-Title-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                            </div>
+                                            <div class="InfoItem-Value">-</div>
+                                        </div>
+                                        <!-- 누르면 결제 중인 상품 보여주기 -->
+                                        <div class="InfoItem-Container clickable">
+                                            <!-- js에서 받아오기 없으면 "-" -->
+                                            <div class="InfoItem-Title">
+                                                결제 중
+                                                <svg class="InfoItem-Title-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                            </div>
+                                            <div class="InfoItem-Value">-</div>
+                                        </div>
+                                        <!-- 누르면 결제가 끝난 상품 보여주기 -->
+                                        <div class="InfoItem-Container clickable">
+                                            <!-- js에서 받아오기 없으면 "-" -->
+                                            <div class="InfoItem-Title">
+                                                결제 완료
+                                                <svg class="InfoItem-Title-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                            </div>
+                                            <div class="InfoItem-Value">-</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 누르면 수정 페이지로 이동 -->
+                        <div class="UserInfo-ModifyBtn">
+                            <button class="ModifyBtn-Button">프로필 편집</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ProfileInfo-Navigation">
+                    <div class="Navigation-Wrapper">
+                        <div class="Navigation-Container">
+                            <span class="Navigation-Span current">
+                                <div class="Navigation-LinkWrapper">
+                                    <a href="">프로필</a>
+                                </div>
+                            </span>
+                            <!-- 메뉴 중에 개숫가 있으면 a 태그 안에 숫자도 추가 -->
+                            <span class="Navigation-Span">
+                                <div class="Navigation-LinkWrapper">
+                                    <a href="">작성한 후기</a>
+                                </div>
+                            </span>
+                            <span class="Navigation-Span">
+                                <div class="Navigation-LinkWrapper">
+                                    <a href="">찜한 상품</a>
+                                </div>
+                            </span>
+                            <span class="Navigation-Span">
+                                <div class="Navigation-LinkWrapper">
+                                    <a href="">결제 중인 상품</a>
+                                </div>
+                            </span>
+                            <span class="Navigation-Span">
+                                <div class="Navigation-LinkWrapper">
+                                    <a href="">결제 완료 상품</a>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="menu-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="MainContent-Wrapper">
+
+                <!-- 메인 프로필 -->
+                <div class="ProfileIntroduction-Wrapper">
+                    <!-- 소개문이 있으면 한 줄씩 span br로 출력하기 -->
+                    등록된 소개가 없습니다.
+                </div>
+
+                <!-- 후기가 있을 경우 프로필에 같이 표기 -->
+                <!-- 작성한 후기 -->
+                <div class="MyReviews-Wrapper">
+                    <div class="MyReviews-InfoWrapper">
+                        <div class="MyReviews-TitleContainer">
+                            <div class="MyReviews-ReviewTitle">작성한 후기</div>
+                            <div class="MyReviews-ReviewTotal">3</div>
+                        </div>
+                    </div>
+
+                    <div class="MyReviews-ReviewContainer">
+                        <!-- 후기 목록 -->
+                        <!--  -->
+                        <div class="MyReviews-ItemInner">
+                            <div>
+                                <!-- 후기작성 회원정보 부분 -->
+                                <div class="ReviewItem-HeaderContainer">
+                                    <div class="ProfileHeader-ProfileWrapper">
+                                        <img alt="profile" src="../../../static/images/haetsal-jangteo-logo.svg" 
+                                        class="ProfileHeader-ProfileImg">
+                                        <div class="ProfileHeader-Profile">
+                                            <div class="ProfileHeader-ProfileName">
+                                                <a href="" class="ProfileHeader-ProfileNameA">홍길동</a>
+                                            </div>
+                                            <div class="ProfileHeader-ProfileInfo">
+                                                <!-- 각 숫자 js로 넣기 -->
+                                                <span class="ProfileHeader-Label">구매한 상품 2</span>
+                                                <span class="ProfileHeader-Dot">·</span>
+                                                <span class="ProfileHeader-Label">후기 4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="DropDown-Wrapper">
+                                        <div class="DropDown-TriggerWrapper">
+                                            <div class="DropDown-TriggerSvg">
+                                                <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 19C8.83 19 10.8 20.97 10.8 23.4C10.8 25.83 8.83 27.8 6.4 27.8C3.97 27.8 2 25.83 2 23.4C2 20.97 3.97 19 6.4 19ZM24.0001 19C26.4301 19 28.4001 20.97 28.4001 23.4C28.4001 25.83 26.4301 27.8 24.0001 27.8C21.5701 27.8 19.6001 25.83 19.6001 23.4C19.6001 20.97 21.5701 19 24.0001 19ZM45.9997 23.4C45.9997 20.97 44.0307 19 41.5997 19C39.1697 19 37.2007 20.97 37.2007 23.4C37.2007 25.83 39.1697 27.8 41.5997 27.8C44.0307 27.8 45.9997 25.83 45.9997 23.4Z"></path></svg>
+                                            </div>
+                                            <!-- js로 클릭시, 활성화 display: flex; -->
+                                            <ul width="205" class="DropDown-Menu off">
+                                                <li>
+                                                    <button class="DropDown-MenuBtn">신고</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기 작성내용 부분 -->
+                                <div class="ReviewItem-BodyContainer">
+                                    <!-- 상품 리뷰 부분 -->
+                                    <div class="ReviewItem-KeyWordContainer">
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">품질</p>
+                                            <p class="ReviewItem-OptionValue">만족해요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">주문/배송</p>
+                                            <p class="ReviewItem-OptionValue">빨랐어요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">친절</p>
+                                            <p class="ReviewItem-OptionValue">친절했어요</p>
+                                        </div>
+                                    </div>
+                                    <!-- 상품 리뷰 상세 부분 -->
+                                    <div class="ReviewItem-Paragraph">
+                                        여기에 리뷰에 대한 상세한 내용이 들어갑니다.
+                                    </div>
+                                </div>
+
+                                <!-- 후기 이미지 부분 -->
+                                <div class="ReviewItem-ImageContainer">
+                                    <div class="ReviewItem-ImageList">
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기를 남긴 상품 링크 -->
+                                <div class="ReviewItem-FooterContainer">
+                                    <a href="" class="ReviewItem-ItemLink">
+                                        <img alt="상품 요약 이미지" src="../../../static/images/haetsal-jangteo-logo.svg" class="ReviewItem-ItemThumnail">
+                                        <div class="ReviewItem-ItemTitle">상품 이름이 표시됩니다.</div>
+                                    </a>
+                                </div>
+
+                                <!-- 후기 작성 시간 부분 -->
+                                <div class="ReviewItem-ThumsUpContainer">
+                                    <div class="ThumsUp-Wrapper">
+                                        <div class="ThumsUp-Left">
+                                            <!-- 작성된 시간 표시하기 -->
+                                            <span>2026.01.14</span>
+                                        </div>
+                                        <div class="ThumsUp-Right">
+                                            <div class="ThumsUp-Buttons">
+                                                <div class="ThumsUp-disLikeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                                <div class="ThumsUp-likeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="MyReviews-ItemInner">
+                            <div>
+                                <!-- 후기작성 회원정보 부분 -->
+                                <div class="ReviewItem-HeaderContainer">
+                                    <div class="ProfileHeader-ProfileWrapper">
+                                        <img alt="profile" src="../../../static/images/haetsal-jangteo-logo.svg" 
+                                        class="ProfileHeader-ProfileImg">
+                                        <div class="ProfileHeader-Profile">
+                                            <div class="ProfileHeader-ProfileName">
+                                                <a href="" class="ProfileHeader-ProfileNameA">홍길동</a>
+                                            </div>
+                                            <div class="ProfileHeader-ProfileInfo">
+                                                <!-- 각 숫자 js로 넣기 -->
+                                                <span class="ProfileHeader-Label">구매한 상품 2</span>
+                                                <span class="ProfileHeader-Dot">·</span>
+                                                <span class="ProfileHeader-Label">후기 4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="DropDown-Wrapper">
+                                        <div class="DropDown-TriggerWrapper">
+                                            <div class="DropDown-TriggerSvg">
+                                                <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 19C8.83 19 10.8 20.97 10.8 23.4C10.8 25.83 8.83 27.8 6.4 27.8C3.97 27.8 2 25.83 2 23.4C2 20.97 3.97 19 6.4 19ZM24.0001 19C26.4301 19 28.4001 20.97 28.4001 23.4C28.4001 25.83 26.4301 27.8 24.0001 27.8C21.5701 27.8 19.6001 25.83 19.6001 23.4C19.6001 20.97 21.5701 19 24.0001 19ZM45.9997 23.4C45.9997 20.97 44.0307 19 41.5997 19C39.1697 19 37.2007 20.97 37.2007 23.4C37.2007 25.83 39.1697 27.8 41.5997 27.8C44.0307 27.8 45.9997 25.83 45.9997 23.4Z"></path></svg>
+                                            </div>
+                                            <!-- js로 클릭시, 활성화 display: flex; -->
+                                            <ul width="205" class="DropDown-Menu off">
+                                                <li>
+                                                    <button class="DropDown-MenuBtn">신고</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기 작성내용 부분 -->
+                                <div class="ReviewItem-BodyContainer">
+                                    <!-- 상품 리뷰 부분 -->
+                                    <div class="ReviewItem-KeyWordContainer">
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">품질</p>
+                                            <p class="ReviewItem-OptionValue">만족해요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">주문/배송</p>
+                                            <p class="ReviewItem-OptionValue">빨랐어요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">친절</p>
+                                            <p class="ReviewItem-OptionValue">친절했어요</p>
+                                        </div>
+                                    </div>
+                                    <!-- 상품 리뷰 상세 부분 -->
+                                    <div class="ReviewItem-Paragraph">
+                                        여기에 리뷰에 대한 상세한 내용이 들어갑니다.
+                                    </div>
+                                </div>
+
+                                <!-- 후기 이미지 부분 -->
+                                <div class="ReviewItem-ImageContainer">
+                                    <div class="ReviewItem-ImageList">
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기를 남긴 상품 링크 -->
+                                <div class="ReviewItem-FooterContainer">
+                                    <a href="" class="ReviewItem-ItemLink">
+                                        <img alt="상품 요약 이미지" src="../../../static/images/haetsal-jangteo-logo.svg" class="ReviewItem-ItemThumnail">
+                                        <div class="ReviewItem-ItemTitle">상품 이름이 표시됩니다.</div>
+                                    </a>
+                                </div>
+
+                                <!-- 후기 작성 시간 부분 -->
+                                <div class="ReviewItem-ThumsUpContainer">
+                                    <div class="ThumsUp-Wrapper">
+                                        <div class="ThumsUp-Left">
+                                            <!-- 작성된 시간 표시하기 -->
+                                            <span>2026.01.14</span>
+                                        </div>
+                                        <div class="ThumsUp-Right">
+                                            <div class="ThumsUp-Buttons">
+                                                <div class="ThumsUp-disLikeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                                <div class="ThumsUp-likeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="MyReviews-ItemInner">
+                            <div>
+                                <!-- 후기작성 회원정보 부분 -->
+                                <div class="ReviewItem-HeaderContainer">
+                                    <div class="ProfileHeader-ProfileWrapper">
+                                        <img alt="profile" src="../../../static/images/haetsal-jangteo-logo.svg" 
+                                        class="ProfileHeader-ProfileImg">
+                                        <div class="ProfileHeader-Profile">
+                                            <div class="ProfileHeader-ProfileName">
+                                                <a href="" class="ProfileHeader-ProfileNameA">홍길동</a>
+                                            </div>
+                                            <div class="ProfileHeader-ProfileInfo">
+                                                <!-- 각 숫자 js로 넣기 -->
+                                                <span class="ProfileHeader-Label">구매한 상품 2</span>
+                                                <span class="ProfileHeader-Dot">·</span>
+                                                <span class="ProfileHeader-Label">후기 4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="DropDown-Wrapper">
+                                        <div class="DropDown-TriggerWrapper">
+                                            <div class="DropDown-TriggerSvg">
+                                                <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 19C8.83 19 10.8 20.97 10.8 23.4C10.8 25.83 8.83 27.8 6.4 27.8C3.97 27.8 2 25.83 2 23.4C2 20.97 3.97 19 6.4 19ZM24.0001 19C26.4301 19 28.4001 20.97 28.4001 23.4C28.4001 25.83 26.4301 27.8 24.0001 27.8C21.5701 27.8 19.6001 25.83 19.6001 23.4C19.6001 20.97 21.5701 19 24.0001 19ZM45.9997 23.4C45.9997 20.97 44.0307 19 41.5997 19C39.1697 19 37.2007 20.97 37.2007 23.4C37.2007 25.83 39.1697 27.8 41.5997 27.8C44.0307 27.8 45.9997 25.83 45.9997 23.4Z"></path></svg>
+                                            </div>
+                                            <!-- js로 클릭시, 활성화 display: flex; -->
+                                            <ul width="205" class="DropDown-Menu off">
+                                                <li>
+                                                    <button class="DropDown-MenuBtn">신고</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기 작성내용 부분 -->
+                                <div class="ReviewItem-BodyContainer">
+                                    <!-- 상품 리뷰 부분 -->
+                                    <div class="ReviewItem-KeyWordContainer">
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">품질</p>
+                                            <p class="ReviewItem-OptionValue">만족해요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">주문/배송</p>
+                                            <p class="ReviewItem-OptionValue">빨랐어요</p>
+                                        </div>
+                                        <div class="ReviewItem-KeyWordItem">
+                                            <p class="ReviewItem-KeyWord">친절</p>
+                                            <p class="ReviewItem-OptionValue">친절했어요</p>
+                                        </div>
+                                    </div>
+                                    <!-- 상품 리뷰 상세 부분 -->
+                                    <div class="ReviewItem-Paragraph">
+                                        여기에 리뷰에 대한 상세한 내용이 들어갑니다.
+                                    </div>
+                                </div>
+
+                                <!-- 후기 이미지 부분 -->
+                                <div class="ReviewItem-ImageContainer">
+                                    <div class="ReviewItem-ImageList">
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                        <div>
+                                            <img alt="review-img" src="../../../static/images/TempItem-Image.png" class="ReviewItem-Image">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 후기를 남긴 상품 링크 -->
+                                <div class="ReviewItem-FooterContainer">
+                                    <a href="" class="ReviewItem-ItemLink">
+                                        <img alt="상품 요약 이미지" src="../../../static/images/haetsal-jangteo-logo.svg" class="ReviewItem-ItemThumnail">
+                                        <div class="ReviewItem-ItemTitle">상품 이름이 표시됩니다.</div>
+                                    </a>
+                                </div>
+
+                                <!-- 후기 작성 시간 부분 -->
+                                <div class="ReviewItem-ThumsUpContainer">
+                                    <div class="ThumsUp-Wrapper">
+                                        <div class="ThumsUp-Left">
+                                            <!-- 작성된 시간 표시하기 -->
+                                            <span>2026.01.14</span>
+                                        </div>
+                                        <div class="ThumsUp-Right">
+                                            <div class="ThumsUp-Buttons">
+                                                <div class="ThumsUp-disLikeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                                <div class="ThumsUp-likeBtn">
+                                                    <svg height="24" width="24" class="" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.9591 9L18.1818 19.052V37H34.9682L40 24.96V18.8H28.6682L30.1955 11.268L27.9591 9ZM10 20.2H15.4545V37H10V20.2Z" fill="#3D3D3D"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+
+                        <!-- 후기 목록 페이지네이션 -->
+                        <!-- 후기 목록에서 활성화 -->
+                        <div class="ReviewItem-PaginationWrap">
+                            <div class="Pagination-Wrapper">
+                                <ul class="Pagination-Container">
+                                    <!-- 페이지네이션 버튼 -->
+                                    <li title="이전 페이지"></li>
+                                    <li ></li>
+                                    <li title="다음 페이지"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 후기 목록 페이지 이동 -->
+                        <!-- 프로필에서 활성화 -->
+                        <a href="" class="ReviewItem-LinkWrapper">
+                            <div class="ReviewItem-LinkButton">
+                                후기 전체 보기
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 빈 후기 페이지 -->
+                <div class="EmptyReview-Wrapper">
+                    <div class="EmptyReview-IconWrap">
+                        <div class="Icon-svg">
+                            <svg viewBox="0 0 48 48"><path d="M42.1181 14.5537C42.1557 14.5161 42.1544 14.454 42.1154 14.415L33.7715 6.07113C33.7325 6.03207 33.6704 6.03085 33.6329 6.06839L29.6905 10.0107C29.653 10.0483 29.6542 10.1103 29.6933 10.1494L38.0371 18.4933C38.0762 18.5323 38.1383 18.5335 38.1758 18.496L42.1181 14.5537Z"></path><path d="M36.134 20.5378C36.1715 20.5003 36.1703 20.4382 36.1312 20.3992C36.0922 20.3601 27.7874 12.0553 27.7874 12.0553C27.7483 12.0163 27.6862 12.015 27.6487 12.0526C27.6111 12.0901 9.6289 30.0723 9.6289 30.0723C9.61462 30.0866 9.60538 30.1052 9.6025 30.1255L8.21584 39.856C8.20646 39.9218 8.2647 39.9801 8.33053 39.9707L18.061 38.584C18.0813 38.5811 18.0999 38.5719 18.1142 38.5576C18.1142 38.5576 36.0964 20.5754 36.134 20.5378Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="EmptyReview-Text">
+                        작성한 후기가 없습니다.
+                    </div>
+                </div>
+                
+                
+                <!-- 찜한 상품 -->
+                
+                <!-- 결제 중인 상품 -->
+                
+                <!-- 결제 완료 상품 -->
+                
+            </div>
+            <!-- 푸터 -->
+        </div>
+    </main>
+</body>
+<script src="../../../static/js/mypage..js"></script>
+</html>
