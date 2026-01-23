@@ -19,6 +19,7 @@ regionBoxes.forEach((regionBox) => {
             box.classList.remove("clicked");
         });
         regionBox.classList.toggle("clicked", !condition);
+        // regionBox.classList.toggle("clicked");
     });
 });
 

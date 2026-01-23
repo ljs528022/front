@@ -494,17 +494,24 @@ button {
 }
 
 .market-card-wrapper {
-    min-width: 136px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s 0s;
     padding: 20px 10px 5px;
     width: 25%;
 }
 
 .each-card {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 136px;
+    position: relative;
 }
+
+/* .market-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+} */
 
 .card-image {
     transition: all 0.2s 0s;
@@ -514,15 +521,22 @@ button {
 }
 
 .card-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+.card-image-wrap:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 12px;
 }
 
 .card-image-wrap {
+    width: 100%;
+    height: 100%;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.04);
     overflow: hidden;
     border-radius: 8px;
     aspect-ratio: 1 / 1;
+    /* flex: 0 0 auto; */
 }
 
 .card-image-wrap img {
@@ -538,6 +552,12 @@ button {
     bottom: 2px;
     right: 2px;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: 0px;
 }
 
 /* 찜 하트 토글 */
@@ -556,8 +576,11 @@ button {
 .card-info {
     display: flex;
     flex-direction: column;
-    margin: 5px 5px;
-    justify-content: flex-start;
+    margin-top: 12px;
+    margin-left: 0px;
+    /* margin: 5px 5px; */
+    padding: 0px 4px;
+    /* justify-content: flex-start; */
     gap: 6px;
 }
 
@@ -617,6 +640,15 @@ button {
     font-size: 13px;
 }
 
+.vertical-card-divider {
+    width: 100%;
+    height: 3px;
+    margin-top: 8px;
+    background: rgb(235, 75, 56);
+    border-radius: 3px;
+}
+
+
 .filter-combobox {
     display: none;
     flex-direction: column;
@@ -647,6 +679,7 @@ button {
     gap: 8px;
     padding: 8px;
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 7px 0px;
 }
 
 .dropdown-market {
