@@ -843,6 +843,273 @@ audio, canvas, embed, iframe, img, object, svg, video {
     background-color: rgb(248, 100, 83);
 }
 
+.Modal-Submit {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 10px 0px;
+    background-color: white;
+    color: rgb(97, 218, 251);
+    border: 1px solid rgb(97, 218, 251);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Modal-Submit:hover {
+    color: white;
+    background-color: rgb(97, 218, 251);
+}
+
+/* 리뷰 작성 모달 CSS */
+.Custom-ModalLayer {
+    position: absolute;
+    width: auto;
+    top: 0px;
+    left: 0px;
+    z-index: 700;
+}
+
+.Custom-ModalWrapper {
+    position: fixed;
+    width: 100%;
+    height: calc(100% + 1px);
+    display: block;
+    background-color: rgba(13, 13, 13, 0.45);
+    transform: translateY(-1px);
+}
+
+.Custom-ModalContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 328px;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    max-width: 600px;
+    max-height: calc(-40px + 100vh);
+    border-radius: 10px;
+}
+
+.Custom-Modal {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    min-height: 0px;
+    border-radius: 10px;
+    padding: 24px 32px 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 16px 0px;
+}
+
+.Custom-ModalHeader {
+    display: flex;
+    position: relative;
+    padding: 0px;
+    height: auto;
+    margin: 0px auto;
+    font-weight: bold;
+    min-height: 36px;
+    align-items: center;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.025em;
+}
+
+.Custom-ModalBody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.ModalBody-ReviewSection {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 16px;
+    color: rgb(109, 109, 109);
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ModalBody-ReviewSelect {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.ModalBody-ReviewSelect span {
+    width: initial;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 120%;
+    padding-left: 7px;
+    align-self: center;
+}
+
+.ReviewSelect-Selection {
+    font-size: 15px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 5px;
+    background-color: rgb(228, 228, 228);
+    appearance: none;
+    text-align: center;
+}
+
+.ModalBody-ReviewDetail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ModalBody-ReviewDetail textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid rgb(228, 228, 228);
+    resize: none;
+}
+
+.ModalBody-ReviewImage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ModalBody-ReviewImage input {
+    display: none;
+}
+
+.ModalBody-ReviewImage label {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 92px;
+    font-size: 14px;
+    padding: 5px 5px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 120%;
+    color: rgb(158, 158, 158);
+    border: 1.5px solid rgb(158, 158, 158);
+    border-radius: 5px;
+}
+
+.ReviewImage-Desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: rgb(109, 109, 109);
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.ModalBody-ReviewImageList {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ReviewImageList-Container {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+
+.ReviewImageList-Item {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.ReviewImageList-Item img {
+    width: 100%;
+    height: 100%;
+}
+
+.Custom-CloseButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.ReviewImageList-RemoveBtn {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.ModalBody-ReviewItemInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ReviewItemInfo-Wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 10px;
+    padding: 5px 8px;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.ReviewItemInfo-Image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.ReviewItemInfo-Image img {
+    width: 100%;
+    height: 100%;
+}
+
+.ReviewItemInfo-Content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.ReviewItemInfo-Title {
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(109, 109, 109);
+}
+
+.Custom-ModalButton {
+    margin: 20px 0px 0px;
+    display: flex;
+    width: 100%;
+}
+
 /* 결제 취소 모달 CSS */
 .PurchaseCancel-ModalLayer {
     position: absolute;
@@ -934,7 +1201,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
     border-radius: 10px;
     outline: none;
     font-weight: 700;
-
 }
 
 

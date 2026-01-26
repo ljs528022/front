@@ -33,10 +33,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
     allSection.forEach((section) => section.classList.add("off"));
 
     // 받아온 리뷰 값
-    let reviews = true;
+    let reviews = false;
     let likeItems = true;
     let pendingItems = true;
     let completeItems = true;
+
+    // 리뷰 작성 입력값
+    let reviewQuality = 0;
+    let reviewDelivery = 0;
+    let reviewkind = 0;
+    let reviewContent = "";
+    let reviewImages = [];
 
     // 각각의 상품들이 없을 경우, 빈 목록 페이지 표시
     if (!likeItems) {
@@ -217,10 +224,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
     });
 
     // --------------------------------------------------------------------------
-    // 결제 완료 상품에서 후기가 있으면 후기 조회, 후기가 없으면 작성 페이지로 이동
+    // 결제 완료 상품에서 후기가 있으면 후기 조회, 후기가 없으면 후기 작성 버튼
     const completeItemList = completeItemDiv.querySelectorAll(
         ".ContentItems-ItemCardWrapper",
     );
+
+    // 리뷰 작성 모달 관련
+    const reviewWriteModal = document.querySelector(".Custom-ModalLayer");
+    const reviewWriteClose = document.querySelector(".Custom-CloseButton");
+    const reviewWriteSubmit = document.querySelector(".Custom-ModalButton");
 
     // 여기서 각 상품마다 후기가 있는지 검사해서 버튼이 달라보이게 해야함.
     completeItemList.forEach((item) => {
@@ -234,13 +246,109 @@ document.addEventListener("DOMContentLoaded", (e) => {
         }
 
         reviewWrite.addEventListener("click", (e) => {
-            // 리뷰 작성 페이지로 이동
+            e.preventDefault();
+            // 리뷰 작성 모달 활성화
+            reviewWriteModal.classList.remove("off");
         });
 
         reviewDetail.addEventListener("click", (e) => {
             // 리뷰 조회 페이지로 이동
         });
     });
+
+    // 리뷰 작성 모달 내 기능
+    const reviewQualityinput = document.getElementById("reviewQuality");
+    const reviewDeliveryInput = document.getElementById("reviewDelivery");
+    const reviewKindInput = document.getElementById("reviewKind");
+    const reviewContentInput = document.getElementById("reviewContent");
+    const reviewImagesInput = document.getElementById("reviewImages");
+
+    // 첨부한 이미지 나열할 곳
+    const reviewImageList = document.querySelector(
+        ".ReviewImageList-Container",
+    );
+
+    reviewQualityinput.addEventListener("change", (e) => {
+        reviewQuality = e.target.value;
+    });
+    reviewDeliveryInput.addEventListener("change", (e) => {
+        reviewDelivery = e.target.value;
+    });
+    reviewKindInput.addEventListener("change", (e) => {
+        reviewkind = e.target.value;
+    });
+    reviewContentInput.addEventListener("keyup", (e) => {
+        reviewContent = e.target.value;
+    });
+    reviewImagesInput.addEventListener("change", (e) => {
+        let images = e.target.files;
+        let imgUrl = "";
+
+        if (images.length > 5) {
+            alert("사진은 최대 5장 까지만 첨부가 가능합니다.");
+            return;
+        } else if (images.length === 1) {
+            let img = e.target.files[0];
+            imgUrl = URL.createObjectURL(img);
+
+            let div = document.createElement("div");
+            div.classList.add("ReviewImageList-Item");
+            div.innerHTML = `
+            <img src="${imgUrl}" alt="">
+            <button type="button" class="ReviewImageList-RemoveBtn">
+                <svg width="9" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.064 7.8927L2.13314 0L0.0311185 2.09192L7.96193 9.98462L0 17.9083L2.10202 20.0002L10.064 12.0765L17.8983 19.8732L20.0003 17.7813L12.166 9.98462L19.9692 2.21889L17.8672 0.126967L10.064 7.8927Z" fill="#3D3D3D"></path></svg>
+            </button>
+            `;
+            reviewImageList.appendChild(div);
+
+            images = null;
+            return;
+        }
+
+        Array.from(images).forEach((img) => {
+            imgUrl = URL.createObjectURL(img);
+            reviewImages.push(imgUrl);
+        });
+
+        reviewImages.forEach((image) => {
+            let div = document.createElement("div");
+            div.classList.add("ReviewImageList-Item");
+            div.innerHTML = `
+            <img src="${image}" alt="">
+            <button type="button" class="ReviewImageList-RemoveBtn">
+                <svg width="9" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.064 7.8927L2.13314 0L0.0311185 2.09192L7.96193 9.98462L0 17.9083L2.10202 20.0002L10.064 12.0765L17.8983 19.8732L20.0003 17.7813L12.166 9.98462L19.9692 2.21889L17.8672 0.126967L10.064 7.8927Z" fill="#3D3D3D"></path></svg>
+            </button>
+            `;
+
+            reviewImageList.appendChild(div);
+        });
+
+        // 만들어진 이미지, 버튼 선언 (위에서 선언하면 못 불러옴)
+        const reviewImagesDiv = document.querySelectorAll(
+            ".ReviewImageList-Item",
+        );
+        const reviewImgDeleteBtns = document.querySelectorAll(
+            ".ReviewImageList-RemoveBtn",
+        );
+
+        reviewImgDeleteBtns.forEach((button, i) => {
+            button.addEventListener("click", (e) => {
+                reviewImagesDiv[i].remove();
+                reviewImages.pop(reviewImages[i]);
+            });
+        });
+    });
+
+    reviewWriteSubmit.addEventListener("click", (e) => {
+        // 리뷰 등록하는 로직 작성해야함.
+
+        reviewWriteModal.classList.add("off");
+    });
+
+    reviewWriteClose.addEventListener("click", (e) => {
+        reviewWriteModal.classList.add("off");
+    });
+
     // 로딩되면 프로필을 기본적으로 활성화
     document.querySelector('.Navigation-Span[name="profile"]')?.click();
 });

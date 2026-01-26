@@ -233,9 +233,10 @@
                                 <div class="UserSetting-InputLabel">현재 비밀번호</div>
                                 <div class="UserSetting-InputContainer">
                                     <span class="UserSetting-Input">
-                                        <input id="prevPassword" name="prevPassword" type="text" placeholder="현재 비밀번호" autocapitalize="off" autocomplete="off">
+                                        <input id="prevPassword" name="prevPassword" type="text" placeholder="현재 비밀번호"  autocapitalize="off" autocomplete="off">
                                     </span>
                                 </div>
+                                <div class="UserSetting-InputWrong off"></div>
                             </div>
                             
                             <div class="UserSetting-InputWrapper password">
@@ -245,11 +246,13 @@
                                         <input id="password" name="password" type="text" placeholder="변경할 비밀번호" autocapitalize="off" autocomplete="off">
                                     </span>
                                 </div>
+                                <div class="UserSetting-InputWrong off"></div>
                                 <div class="UserSetting-InputContainer">
                                     <span class="UserSetting-Input">
                                         <input id="passwordCheck" name="passwordCheck" type="text" placeholder="변경할 비밀번호 확인" autocapitalize="off" autocomplete="off">
                                     </span>
                                 </div>
+                                <div class="UserSetting-InputWrong off"></div>
                             </div>
 
                             <!-- Submit 버튼 -->
@@ -278,6 +281,7 @@
                                 <span class="UserSetting-Input">
                                     <input id="phone" name="phone" type="text" placeholder="연락처를 입력해주세요" autocapitalize="off" autocomplete="off">
                                 </span>
+                                <div class="UserSetting-InputWrong"></div>
                                 <div class="UserSetting-InputDescription">
                                 "-" 없이 입력해주세요.
                                 </div>
@@ -341,9 +345,7 @@
                                 배송지를 추가해주세요.
                             </div>
                         </div>
-
                     </div>
-
                 </div>
                 
                 <!-- 각 설정 요소의 설명문 -->
@@ -378,12 +380,12 @@
                         <div class="Delivery-ModalBody">
                             <div class="Delivery-ModalBodyWrapper">
                                 <!-- 받는 사람 -->
-                                <div id="receiver" class="Delivery-FormWrapper">
+                                <div id="receiver-name" class="Delivery-FormWrapper">
                                     <div class="Delivery-FormLabel">받는 사람</div>
                                     <div class="Delivery-FormContent">
                                         <span class="Delivery-InputWrapper">
                                             <!-- 나중에 테이블에 맞게 id 수정 -->
-                                            <input type="text" placeholder="받는 분 성함을 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
+                                            <input id="receiverName" name="receiverName" type="text" placeholder="받는 분 성함을 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
                                         </span>
                                     </div>
                                 </div>
@@ -396,7 +398,7 @@
                                         <!-- input이 영역을 누르면 주소 api 화면으로 전환 -->
                                         <span class="Delivery-InputWrapper">
                                             <!-- 나중에 테이블에 맞게 id 수정 -->
-                                            <input id="receiver-address" type="text" autocapitalize="off" autocomplete="off" class="Delivery-Input">
+                                            <input id="address" name="address" type="text" autocapitalize="off" autocomplete="off" class="Delivery-Input">
                                             <button class="Delivery-InputButton">
                                                 <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.8113 37.22C13.3064 37.22 6.4025 30.3161 6.4025 21.8113C6.4025 13.3064 13.3064 6.4025 21.8113 6.4025C30.3161 6.4025 37.22 13.3064 37.22 21.8113C37.22 30.3161 30.3161 37.22 21.8113 37.22ZM45.3246 42.2229L37.22 34.1172C44.0239 25.6124 42.6231 13.1063 34.1182 6.4025C30.9174 3.70097 26.714 2.20011 22.5117 2H21.8113H21.1109C10.805 2.40023 2.40023 10.7049 2 21.0108V21.7112V22.3115C2.30017 33.2177 11.4053 41.8226 22.3115 41.5225C26.614 41.4224 30.7163 39.9215 34.1182 37.22L42.2229 45.3246C43.1234 46.2251 44.4251 46.2251 45.3246 45.3246C46.2251 44.5242 46.2251 43.1224 45.3246 42.2229Z"></path></svg>
                                             </button>
@@ -410,7 +412,7 @@
                                     <div class="Delivery-FormContent">
                                         <span class="Delivery-InputWrapper">
                                             <!-- 나중에 테이블에 맞게 id 수정 -->
-                                            <input id="receiver-addressDetail" type="text" placeholder="상세 주소를 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
+                                            <input id="addressDetail" name="addressDetail" type="text" placeholder="상세 주소를 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
                                         </span>
                                     </div>
                                 </div>
@@ -421,7 +423,7 @@
                                     <div class="Delivery-FormContent">
                                         <span class="Delivery-InputWrapper">
                                             <!-- 나중에 테이블에 맞게 id 수정 -->
-                                            <input id="receiver-phone" type="text" placeholder="받는 분 휴대폰 번호를 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
+                                            <input id="receiverPhone" name="receiverPhone" type="text" placeholder="받는 분 휴대폰 번호를 입력해주세요." autocapitalize="off" autocomplete="off" class="Delivery-Input">
                                         </span>
                                     </div>
                                 </div>
@@ -467,7 +469,7 @@
                     <!--  -->
 
                     <!-- 다음 주소 API -->
-                    <div class="Delivery-Modal off">
+                    <div class="Delivery-Modal api off">
                         <div class="Delivery-ModalHeader">
                             주소 추가
                             <!-- 해당 버튼 누르면 배송 정보 부분 활성화 -->
@@ -492,4 +494,5 @@
 <script src="../../../static/js/user/modify/setUserAccount.js"></script>
 <script src="../../../static/js/user/modify/setUserDelivery.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </html>

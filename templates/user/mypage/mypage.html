@@ -951,31 +951,96 @@
         </div>
 
         <!-- 찜 해제 Modal -->
-        <div class="Modal-Wrapper">
-            <div class="Modal-Container">
-
-            </div>
+        <div class="Modal-Wrapper of">
+            <div class="Modal-Container"></div>
         </div>
 
-        <!-- 결제 취소 모달 -->
-        <div class="Modal-Wrapper cancel">
-            <div class="Modal-Container cancel">
-                <div class="Modal-InnerWrapper cancel">
-                    <div class="Modal-Header">
-                        <span>결제 취소</span>
-                    </div>
-                    <div class="Modal-Body">
-                        <span>정말 해당 상품의 결제를 취소합니까?</span><br/>
-                        <span>자세한 문의는 고객센터를 참고해주세요.</span><br/>
-                    </div>
-                    <div class="Modal-Button">
-                        <button type="button" class="Modal-Close">돌아가기</button>
-                        <button type="button" class="Modal-Cancel">결제취소</button>
+        <!-- 리뷰 작성 모달 -->
+        <div class="Custom-ModalLayer">
+            <div class="Custom-ModalWrapper">
+                <div class="Custom-ModalContainer">
+                    <div class="Custom-Modal">
+                        <div class="Custom-ModalHeader">
+                            후기 작성
+                        </div>
+                        <button type="button" class="Custom-CloseButton">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.064 7.8927L2.13314 0L0.0311185 2.09192L7.96193 9.98462L0 17.9083L2.10202 20.0002L10.064 12.0765L17.8983 19.8732L20.0003 17.7813L12.166 9.98462L19.9692 2.21889L17.8672 0.126967L10.064 7.8927Z" fill="#3D3D3D"></path></svg>
+                        </button>
+                        <div class="Custom-ModalBody">
+                            <div class="ModalBody-ReviewSection">
+                                <div class="ModalBody-ReviewSelect">
+                                    <span>품질</span>
+                                    <select class="ReviewSelect-Selection" name="reviewQuality" id="reviewQuality">
+                                        <option value="3">만족해요</option>
+                                        <option value="2">보통이에요</option>
+                                        <option value="1">아쉬워요</option>
+                                    </select>
+                                </div>
+                                <div class="ModalBody-ReviewSelect">
+                                    <span>주문/배송</span>
+                                    <select class="ReviewSelect-Selection" name="reviewDelivery" id="reviewDelivery">
+                                        <option value="3">빨랐어요</option>
+                                        <option value="2">보통이에요</option>
+                                        <option value="1">느렸어요</option>
+                                    </select>
+                                </div>
+                                <div class="ModalBody-ReviewSelect">
+                                    <span>친절</span>
+                                    <select class="ReviewSelect-Selection" name="reviewKind" id="reviewKind">
+                                        <option value="3">만족해요</option>
+                                        <option value="2">보통이에요</option>
+                                        <option value="1">아쉬워요</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Custom-ModalBody">
+                            <!-- 받아와서 뿌려야함 -->
+                            <div class="ModalBody-ReviewItemInfo">
+                                <span>구매한 상품</span>
+                                <a href="" class="ReviewItemInfo-Wrapper">
+                                    <div class="ReviewItemInfo-Image">
+                                        <img src="../../../static/images/haetsal-jangteo-logo.svg" alt="">
+                                    </div>
+                                    <div class="ReviewItemInfo-Content">
+                                        <div class="ReviewItemInfo-Title">여기에 상품 이름이 표시됩니다.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="Custom-ModalBody">
+                            <div class="ModalBody-ReviewDetail">
+                                <span>후기 상세</span>
+                                <textarea name="reviewContent" id="reviewContent" placeholder="후기에 대한 자세한 내용을 적어주세요."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="Custom-ModalBody">
+                            <div class="ModalBody-ReviewImage">
+                                <span>첨부 사진</span>
+                                <input type="file" multiple id="reviewImages" name="reviewImages">
+                                <label for="reviewImages">파일업로드</label>
+                                <div class="ReviewImage-Desc">최대 5개 까지만 첨부할 수 있습니다.</div>
+                            </div>
+                            <!-- 파일 첨부되면 여기에 최대 5개 저장 -->
+                            <div class="ModalBody-ReviewImageList">
+                                <div class="ReviewImageList-Container">
+                                    <!-- 여기에 저장한 이미지 나열 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Custom-ModalButton">
+                            <button type="button" class="Modal-Submit">리뷰 등록</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 결제 취소 모달 -->
         <div class="PurchaseCancel-ModalLayer off">
             <div class="PurchaseCancel-ModalWrapper">
                 <div class="PurchaseCancel-ModalContainer">
@@ -998,5 +1063,5 @@
         </div>
     </main>
 </body>
-<script src="../../../static/js/mypage..js"></script>
+<script src="../../../static/js/user/mypage..js"></script>
 </html>
