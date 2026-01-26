@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세</title>
+    <link rel="stylesheet" href="../../../static/css/product-detail.css">
+</head>
+<body>
+
+    <!-- 전체화면 -->
+    <div class="full-view">
+        <main class="main-layout">
+            <!-- 상세 위쪽 -->
+            <div class="product-intro-bg">
+                <div class="product-intro-container">
+
+                    <!-- 맨위쪽에 카테고리 나누는 링크 -->
+                    <div class="category-links">
+                        <!-- 카테고리a -->
+                        <a href="#">
+                            <span class="category-item">축산물
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                            </span>
+                        </a>
+                        <!-- 카테고리b -->
+                        <a href="#">
+                            <span class="category-item">돼지고기
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="spacer-sm"></div>
+
+                    <!-- 제품소개 -->
+                    <div class="product-intro-wrapper">
+
+                        <!-- 소개왼쪽 사진들 -->
+                        <div class="cover-image-section">
+                            <div class="cover-image-list">
+                                <div class="main-image-container">
+                                    <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC82YzNlODZlNC1jNTNlLTQ2ZDAtOGRiMy0yMmFjZTk4YTAyZDkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="상품 커버이미지">
+                                </div>
+                                <div class="thumbnail-container">
+                                    <div class="thumbnail-active">
+                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC82YzNlODZlNC1jNTNlLTQ2ZDAtOGRiMy0yMmFjZTk4YTAyZDkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 1" class="thumbnail-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 오른쪽 소개칸 -->
+                        <div class="product-info-section">
+                            <div class="product-info-inner">
+
+                                <!-- 판매자이름 클릭하면 가게상세로 이동 -->
+                                <a href="#" class="seller-link">
+                                    <p class="seller-name">김망고</p>
+                                    <svg class="seller-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                </a>
+
+                                <!-- 상품명 -->
+                                <h1 class="product-title">애플망고ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</h1>
+
+                                <!-- 상품가격 -->
+                                <div class="price-wrapper">
+                                    <div class="price-container">
+                                        <div class="price-metric">
+                                            <div class="price-label">상품가격</div>
+                                            <div class="price-value">
+                                                <span>10000 원</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <!-- 원산지, 배송정보 -->
+                                <div class="info-section">
+                                    <div class="info-list">
+                                        <dl class="info-item">
+                                            <dt class="info-label">원산지</dt>
+                                            <dd class="info-value">태국산</dd>
+                                        </dl>
+                                        <dl class="info-item">
+                                            <dt class="info-label">배송정보</dt>
+                                            <dd class="info-value">배송비 무료</dd>
+                                        </dl>
+                                        <dl class="info-item">
+                                            <dt class="info-label">배송마감</dt>
+                                            <dd class="info-value">오후 3시(영업일 기준)</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="links-wrapper"></div>
+                                <div class="action-buttons">
+                                    <div class="action-buttons-inner">
+                                        <div class="like-btn-wrapper">
+                                            <div class="like-btn-container">
+                                                <div class="like-btn">
+                                                    <div class="like-btn-inner">
+                                                        <div class="icon-svg">
+                                                            <svg viewBox="0 0 38 34" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.9996 5.62299L15.6051 2.55614C12.2106 -0.510215 6.56995 0.17753 3.48147 3.57849C-0.397666 7.66674 -0.397863 14.5859 3.70675 18.9121L19 33.8811L34.2923 18.9121C38.3969 14.5859 38.3971 7.66747 34.5176 3.57849C31.4291 0.17753 25.7888 -0.510094 22.3942 2.55614L18.9996 5.62299ZM32.0081 16.6701C34.9446 13.533 34.8523 8.58052 32.1962 5.78099L32.1721 5.75565L32.1487 5.72978C30.0533 3.42248 26.4219 3.23047 24.5394 4.93062L18.9996 9.93557L13.4601 4.93076C11.5777 3.2306 7.94577 3.42244 5.85042 5.72978L5.82689 5.75569L5.8028 5.78108C3.14716 8.57988 3.05453 13.533 5.99094 16.6701L18.9999 29.4033L32.0081 16.6701Z" fill="#6D6D6D"></path></svg>
+                                                        </div>
+                                                        <span class="like-count">6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="share-btn-wrapper">
+                                            <div class="share-btn-container">
+                                                <button type="button" class="share-btn">
+                                                    <div class="icon-svg">
+                                                        <svg viewBox="0 0 32 35" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 9.8C27.3226 9.8 28.8 8.32254 28.8 6.5C28.8 4.67746 27.3226 3.2 25.5 3.2C23.6775 3.2 22.2 4.67746 22.2 6.5C22.2 8.32254 23.6775 9.8 25.5 9.8ZM25.5 13C29.0899 13 32 10.0899 32 6.5C32 2.91015 29.0899 0 25.5 0C21.9102 0 19 2.91015 19 6.5C19 7.00407 19.0574 7.49475 19.166 7.96584L13.2462 11.8889L10.9897 13.2996C9.82276 12.1847 8.24135 11.4999 6.5 11.4999C2.91015 11.4999 0 14.4101 0 17.9999C0 21.5898 2.91015 24.4999 6.5 24.4999C8.22679 24.4999 9.79631 23.8266 10.9603 22.7281L19.0878 27.4291C19.0301 27.7775 19 28.1352 19 28.4999C19 32.0898 21.9102 34.9999 25.5 34.9999C29.0899 34.9999 32 32.0898 32 28.4999C32 24.9101 29.0899 21.9999 25.5 21.9999C23.4257 21.9999 21.5784 22.9716 20.3882 24.4846L12.6783 20.0251C12.8871 19.3878 13 18.7071 13 17.9999C13 17.3061 12.8913 16.6376 12.6899 16.0106L14.9785 14.5798L20.6465 10.8236C21.8369 12.159 23.5703 13 25.5 13ZM6.5 21.2999C8.32254 21.2999 9.8 19.8225 9.8 17.9999C9.8 16.1774 8.32254 14.6999 6.5 14.6999C4.67746 14.6999 3.2 16.1774 3.2 17.9999C3.2 19.8225 4.67746 21.2999 6.5 21.2999ZM28.8 28.4999C28.8 30.3225 27.3226 31.7999 25.5 31.7999C23.6775 31.7999 22.2 30.3225 22.2 28.4999C22.2 26.6774 23.6775 25.1999 25.5 25.1999C27.3226 25.1999 28.8 26.6774 28.8 28.4999Z" fill="#6D6D6D"></path></svg>
+                                                    </div>
+                                                    <span class="share-count">3</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="buy-btn-wrapper">
+                                            <div class="buy-btn-container">
+                                                <div class="cta-container">
+                                                    <div class="cta-btn-container">
+                                                        <button type="button" class="buy-btn">
+                                                            구매하기
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 네비게이션 -->
+            <div class="navigation-bar">
+                <nav class="nav-bar">
+                    <div class="nav-inner">
+                        <div class="nav-left">
+                            <div class="nav-item selected">상품 상세</div>
+                            <div class="nav-item">문의</div>
+                            <div class="nav-item">후기</div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="content-bg">
+                <div class="content-container">
+                    <div class="content-wrapper">
+                        <div class="content-main">
+                            <div class="content-main-inner">
+                                <div class="story-wrap">
+                                    <div class="section-tabs-wrapper">
+
+                                        <!-- 상품상세에서 스크롤내리면 따라옴 -->
+                                        <ul class="section-tabs">
+                                            <a class="section-tab active">상품 설명</a>
+                                            <a class="section-tab">판매자 소개</a>
+                                            <a class="section-tab">환불/교환 정책</a>
+                                        </ul>
+                                    </div>
+                                    <div class="story-card">
+                                        <div class="spacer-md"></div>
+
+                                        <!-- 상품소개~환불정책 -->
+                                        <div class="story-card-inner">
+                                            <!-- 더보기 누르면 max-height변함 -->
+                                            <div class="story-content">
+                                                <div class="full-story-content-wrap">
+                                                    <div class="product-story">상품 소개</div>
+                                                    <div class="full-story-content">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 사이드 컨텐츠들 -->
+                        <div class="side-content-container">
+                            <div class="side-content-wrapper">
+
+                                <!-- 판매자랑 구매자 리뷰카드 -->
+                                <div class="seller-products-contatiner">
+                                    <div class="seller-products-wrapper">
+                                        <!-- 리뷰카드 -->
+                                        <div class="review-wrap">
+                                            <a href="https://tumblbug.com/u/glasody/review" class="review-info-wrap">
+                                                <div class="review-info-title">이 상점의 다른 상품 후기
+                                                    <svg class="ReviewInfoWrap" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
+                                                </div>
+                                                <div class="review-keyword-wrap">
+                                                    <span class="review-keyword">
+                                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1jZG4tcHJvZCIsImtleSI6InJldmlldy1pdGVtcy9yZWQtdGh1bWItdXAucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0MCwiaGVpZ2h0Ijo0MCwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlLCJmaXQiOm51bGx9LCJyb3VuZENyb3AiOmZhbHNlLCJyb3RhdGUiOm51bGx9fQ==" class="review-thumb">
+                                                        <span>재구매 할래요</span>
+                                                        <span>50%</span>
+                                                        <span>(구매자 응답)</span>
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <div class="review-image-wrap">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="seller-wrap">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="../../../static/js/product-detail.js"></script>
+</html>
