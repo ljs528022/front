@@ -1,0 +1,226 @@
+*, :after, :before {
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.ContentOnlyLayout__Wrapper-sc{
+    background-color: white;
+    height: 100%;
+    }
+
+.styled__NewMemberShipContainer-sc{
+        position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.styled__NewMemberShipContainerInner-sc{
+    padding: 40px 16px;
+        max-width: 1080px;
+
+            flex: 1 1 0%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+.styled__BgWrap-sc{
+    display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+                background-image: url('../images/햇살장터\ 회원가입\ 이미지.png');
+        background-size: cover;
+        background-position: center center;
+
+}
+
+.styled__LoginWrap-sc{
+        flex: 1 1 0px;
+
+}
+
+.styled__LoginWrapInner-sc{
+
+            margin: 0px;
+        max-width: 414px;
+
+
+}
+
+.styled__TitleWrap-sc{
+            text-align: center;
+        margin-bottom: 85px;
+        
+
+}
+
+.styled__KakaoLoginTitle-sc{
+            line-height: 36px;
+        font-size: 24px;
+            font-weight: 700;
+    color: rgb(13, 13, 13);
+
+}
+
+.styled__KakaoButton-sc{
+        position: relative;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding: 0px 18px;
+    background-color: rgb(254, 229, 0);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: rgb(25, 25, 25);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 120%;
+    cursor: pointer;
+}
+.button{
+        cursor: pointer;
+
+        -webkit-appearance: button;
+            background-image: none;
+        text-transform: none;
+
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit; 
+    margin: 0;
+}
+
+.Icon__SVGICON-sc{
+        position: absolute;
+    left: 18px;
+    font-size: 24px;
+    margin-right: auto;
+
+    display: inline-flex;
+    align-self: center;
+
+}
+
+.SocialMembershipMenu__Wrapper{
+    
+            margin-top: 60px;
+        text-align: center;
+}
+
+
+.styled__Divider{
+    padding: 10px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.styled__Divider > span {
+    position: relative;
+    padding: 16px;
+    color: rgb(158, 158, 158);
+    font-size: 12px;
+}
+
+.styled__Divider > span::before, .styled__Divider > span::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    top: 50%;
+    width: 5000px;
+}
+
+.styled__Divider > span::after {
+    left: 100%;
+}
+
+.styled__Divider > span::before {
+    right: 100%;
+}
+
+.SoicalLoginButton{
+ 
+        /* height: auto;
+        padding: 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; */
+
+        margin-right: 20px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Icon__SVGICON{
+    font-size: 44px;
+    
+    
+}
+
+
+.Icon__SVGICON svg{
+
+    width: 1em;
+    height: 1em;
+
+    
+    
+}
+
+
+.SignIn__MenuContainer{
+        display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.AccountSwitchPrompt__Wrapper{
+display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    color: rgb(28, 28, 28);
+    }
+
+    .PlainNavLink__Wrapper{
+            font-size: 13px;
+    font-weight: normal;
+    line-height: 120%;
+    }
+
+   .PlainNavLink__Wrapper > a {
+    color: rgb(61, 61, 61);
+    text-decoration: underline;
+}
+
+.AccountSwitchPrompt__MenuDivider{
+        width: 1px;
+    height: 12px;
+    background-color: rgb(228, 228, 228);
+}

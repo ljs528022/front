@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../../static/css/store-detail-dashboard.css">
+    <link rel="stylesheet" href="../../static/css/store-detail-dashboard.css">
 </head>
 <body>
 <!-- 나중에 헤더받고 복붇 -->
@@ -55,10 +55,10 @@
                                         </div>공유
                                     </button>
                                 </div>
-                                <button class="follow-btn-wrap">
+                                <!-- <button class="follow-btn-wrap">
                                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M26.1333 6.93333H21.8667V21.8667H8V26.1333H21.8667V41.0667H26.1333V26.1333H40V21.8667H26.1333V6.93333Z" fill="currentColor"></path></svg>
                                     팔로우
-                                </button>
+                                </button> -->
                             </div>
                         </div> 
                     </div>
@@ -402,7 +402,7 @@
                                                 </div>
                                             </div>
                                             <div class="keyword-item">
-                                                <div class="item-title">품질</div>
+                                                <div class="item-title">주문/배송</div>
                                                 <div class="review-option-wrap">
                                                     <div class="review-option">
                                                         <div class="option-title">만족해요</div>
@@ -433,7 +433,7 @@
                                                 </div>
                                             </div>
                                             <div class="keyword-item">
-                                                <div class="item-title">품질</div>
+                                                <div class="item-title">친절</div>
                                                 <div class="review-option-wrap">
                                                     <div class="review-option">
                                                         <div class="option-title">만족해요</div>
@@ -1299,7 +1299,7 @@
                                                 </div>
                                             </div>
                                             <div class="keyword-item">
-                                                <div class="item-title">품질</div>
+                                                <div class="item-title">주문/배송</div>
                                                 <div class="review-option-wrap">
                                                     <div class="review-option">
                                                         <div class="option-title">만족해요</div>
@@ -1330,7 +1330,7 @@
                                                 </div>
                                             </div>
                                             <div class="keyword-item">
-                                                <div class="item-title">품질</div>
+                                                <div class="item-title">친절</div>
                                                 <div class="review-option-wrap">
                                                     <div class="review-option">
                                                         <div class="option-title">만족해요</div>
@@ -1503,6 +1503,12 @@
                                                 </span>체크되면 스판태그스탈 바뀜
                                             </label>
                                         </div>
+                                    </div>
+
+                                    <!-- 사진만보기했을때 나오는 div -->
+                                    <div class="photo-review-count">
+                                        <span class="photo-count">21</span>
+                                        개의 후기
                                     </div>
 
                                     <!-- 하나의 리뷰 -->
@@ -2067,6 +2073,12 @@
             </div>
         </main>
     </div>
+    <div class="modal">
+        <div class="like-modal">
+            <div id="content-wrap">좋아하는 시장에 추가 되었습니다.</div>
+        </div>
+    </div>
 </body>
-<script src="../../../static/js/store-detail.js"></script>
+<script src="../../static/js/store-detail.js"></script>
+<script src="../../static/js/store-detail-banner.js"></script>
 </html>

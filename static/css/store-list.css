@@ -83,6 +83,7 @@ html {
     line-height: 1.5;
     tab-size: 4;
     font-family: sans-serif;
+    font-feature-settings: normal;
     font-variation-settings: normal;
     overflow-y: scroll;
 }

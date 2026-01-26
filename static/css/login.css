@@ -1,0 +1,275 @@
+.styled__NewMemberShipContainer{
+
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.styled__NewMemberShipContainerInner{
+flex: 1 1 0%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0px auto;
+    padding: 20px 16px;
+    box-sizing: border-box;    
+}
+
+
+.styled__BgWrap{
+display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+
+        background-image: url('../images/햇살장터\ 로그인\ 이미지.png');
+        background-size: cover;
+        background-position: center center;
+}
+
+.styled__LoginWrap{
+    flex: 1 1 0px;
+
+}
+
+.styled__LoginWrapInner{
+            margin: 0px;
+        max-width: 414px;
+
+
+}
+
+.styled__Title{
+    text-align: center;
+        margin-top: 50px;
+
+}
+.SignIn__KakaoLoginSubTitle{
+            font-size: 20px;
+                margin: 0px 0px 4px;
+    font-weight: 300;
+    color: rgb(13, 13, 13);
+
+
+}
+
+.styled__KakaoLoginTitle{
+            line-height: 36px;
+        font-size: 24px;
+            font-weight: 700;
+    color: rgb(13, 13, 13);
+
+}
+.styled__KakaoButton{
+    position: relative;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding: 0px 18px;
+    background-color: rgb(254, 229, 0);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: rgb(25, 25, 25);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 120%;
+
+    cursor: pointer;
+
+}
+
+.kakaoIcon{
+        position: absolute;
+    left: 18px;
+    font-size: 24px;
+    margin-right: auto;
+
+}
+
+.styled__BusinessButton{
+    position: relative;
+    margin-top: 8px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    padding: 0px 18px;
+    background-color: rgb(55, 190, 87);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: rgb(25, 25, 25);
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 120%;
+
+    cursor: pointer;
+
+}
+
+
+.BusinessIcon{
+        position: absolute;
+    left: 18px;
+    font-size: 24px;
+    margin-right: auto;
+
+}
+
+.SocialMembershipMenu__Wrapper{
+            margin-top: 70px;
+        text-align: center;
+
+}
+
+*, :after, :before {
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.styled__Divider{
+    padding: 10px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.styled__Divider > span {
+    position: relative;
+    padding: 16px;
+    color: rgb(158, 158, 158);
+    font-size: 12px;
+}
+
+.styled__Divider > span::before, .styled__Divider > span::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    top: 50%;
+    width: 5000px;
+}
+
+.styled__Divider > span::after {
+    left: 100%;
+}
+
+.styled__Divider > span::before {
+    right: 100%;
+}
+
+.SoicalLoginButton{
+        height: auto;
+        padding: 0px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Icon__SVGICON{
+    font-size: 44px;
+    
+    
+}
+
+
+.Icon__SVGICON svg{
+
+    width: 1em;
+    height: 1em;
+
+    
+    
+}
+
+
+.SignIn__MenuContainer{
+        display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.AccountSwitchPrompt__Wrapper{
+display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 16px;
+    color: rgb(28, 28, 28);
+    }
+
+    .PlainNavLink__Wrapper{
+            font-size: 13px;
+    font-weight: normal;
+    line-height: 120%;
+    }
+
+   .PlainNavLink__Wrapper > a {
+    color: rgb(61, 61, 61);
+    text-decoration: underline;
+}
+
+.AccountSwitchPrompt__MenuDivider{
+        width: 1px;
+    height: 12px;
+    background-color: rgb(228, 228, 228);
+}
+
+/* .LoginHeader__LoginHeaderWrapper{
+        position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+}
+
+.LoginHeader__LoginHeaderInner{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1080px;
+    padding: 0px 16px;
+    margin: 0px auto;
+
+}
+
+.LoginHeader__LogoButton{
+      
+     background: none;
+    border: none;
+    cursor: pointer;
+    width: 120px;  
+    display: block;
+    margin: 0 auto;  
+
+                
+
+} */
