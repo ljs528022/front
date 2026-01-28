@@ -11,6 +11,12 @@
     <!-- 전체화면 -->
     <div class="full-view">
         <main class="main-layout">
+            <!-- 화면을 맨위로 올리는 버튼 -->
+            <button id="top" class="go-top-scroll-btn">
+                <span class="go-top-scroll-btn-arrow">↑</span>
+                <span class="go-top-scroll-btn-text">TOP</span>
+            </button>
+
             <!-- 상세 위쪽 -->
             <div class="product-intro-bg">
                 <div class="product-intro-container">
@@ -38,12 +44,28 @@
                         <!-- 소개왼쪽 사진들 -->
                         <div class="cover-image-section">
                             <div class="cover-image-list">
+
+                                <!-- 커버 이미지 (큰이미지) -->
                                 <div class="main-image-container">
-                                    <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC82YzNlODZlNC1jNTNlLTQ2ZDAtOGRiMy0yMmFjZTk4YTAyZDkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="상품 커버이미지">
+                                    <img class="main-image" src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC82YzNlODZlNC1jNTNlLTQ2ZDAtOGRiMy0yMmFjZTk4YTAyZDkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="상품 커버이미지">
                                 </div>
+
+                                <!-- 아래에 작게 썸네일 이미지 -->
                                 <div class="thumbnail-container">
-                                    <div class="thumbnail-active">
+                                    <div class="thumbnail-item active">
                                         <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC82YzNlODZlNC1jNTNlLTQ2ZDAtOGRiMy0yMmFjZTk4YTAyZDkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 1" class="thumbnail-img">
+                                    </div>
+                                    <div class="thumbnail-item">
+                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC8wYmU0Y2Q5Yy0yNWQxLTQ0ZTMtYWI0OS1jNTNhODc2YWNiNGQuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 2" class="thumbnail-img">
+                                    </div>
+                                    <div class="thumbnail-item">
+                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC9kODg0M2JlNy1lNTc4LTQ5MWItOGQ4Yi1hNmZkNjMxNGI0ZDMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 3" class="thumbnail-img">
+                                    </div>
+                                    <div class="thumbnail-item">
+                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC84MmYxMjA3Mi1iYTJhLTRiYmItOWI3OS0yMDllMjhiMGUzZDEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 4" class="thumbnail-img">
+                                    </div>
+                                    <div class="thumbnail-item">
+                                        <img src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzQxODcwYWVlLTRlMWYtNDQ3Ni1hOWUzLWNjMTQ2Mjk0N2VmOC80YmU1NzY1Mi1iNWUzLTQyMzQtOWI0Mi0wZWU5ZWE1ZDBhOTEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZSwiZml0IjpudWxsfSwicm91bmRDcm9wIjpmYWxzZSwicm90YXRlIjpudWxsfX0=" alt="썸네일 5" class="thumbnail-img">
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +123,8 @@
                                                 <div class="like-btn">
                                                     <div class="like-btn-inner">
                                                         <div class="icon-svg">
-                                                            <svg viewBox="0 0 38 34" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.9996 5.62299L15.6051 2.55614C12.2106 -0.510215 6.56995 0.17753 3.48147 3.57849C-0.397666 7.66674 -0.397863 14.5859 3.70675 18.9121L19 33.8811L34.2923 18.9121C38.3969 14.5859 38.3971 7.66747 34.5176 3.57849C31.4291 0.17753 25.7888 -0.510094 22.3942 2.55614L18.9996 5.62299ZM32.0081 16.6701C34.9446 13.533 34.8523 8.58052 32.1962 5.78099L32.1721 5.75565L32.1487 5.72978C30.0533 3.42248 26.4219 3.23047 24.5394 4.93062L18.9996 9.93557L13.4601 4.93076C11.5777 3.2306 7.94577 3.42244 5.85042 5.72978L5.82689 5.75569L5.8028 5.78108C3.14716 8.57988 3.05453 13.533 5.99094 16.6701L18.9999 29.4033L32.0081 16.6701Z" fill="#6D6D6D"></path></svg>
+                                                            <svg class="black-heart" viewBox="0 0 38 34" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.9996 5.62299L15.6051 2.55614C12.2106 -0.510215 6.56995 0.17753 3.48147 3.57849C-0.397666 7.66674 -0.397863 14.5859 3.70675 18.9121L19 33.8811L34.2923 18.9121C38.3969 14.5859 38.3971 7.66747 34.5176 3.57849C31.4291 0.17753 25.7888 -0.510094 22.3942 2.55614L18.9996 5.62299ZM32.0081 16.6701C34.9446 13.533 34.8523 8.58052 32.1962 5.78099L32.1721 5.75565L32.1487 5.72978C30.0533 3.42248 26.4219 3.23047 24.5394 4.93062L18.9996 9.93557L13.4601 4.93076C11.5777 3.2306 7.94577 3.42244 5.85042 5.72978L5.82689 5.75569L5.8028 5.78108C3.14716 8.57988 3.05453 13.533 5.99094 16.6701L18.9999 29.4033L32.0081 16.6701Z" fill="#6D6D6D"></path></svg>
+                                                            <svg class="red-heart" viewBox="0 0 38 34"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.9996 5.62299L15.6051 2.55614C12.2106 -0.510215 6.56995 0.17753 3.48147 3.57849C-0.397666 7.66674 -0.397863 14.5859 3.70675 18.9121L19 33.8811L34.2923 18.9121C38.3969 14.5859 38.3971 7.66747 34.5176 3.57849C31.4291 0.17753 25.7888 -0.510094 22.3942 2.55614L18.9996 5.62299Z" fill="#F86453"></path></svg>
                                                         </div>
                                                         <span class="like-count">6</span>
                                                     </div>
@@ -138,13 +161,14 @@
             </div>
 
             <!-- 네비게이션 -->
+            <!-- 스크롤 내리면 따라옴 -->
             <div class="navigation-bar">
                 <nav class="nav-bar">
                     <div class="nav-inner">
-                        <div class="nav-left">
+                        <div class="nav-items">
                             <div class="nav-item selected">상품 상세</div>
                             <div class="nav-item">후기</div>
-                            <div class="nav-item">문의</div>
+                            <!-- <div class="nav-item">문의</div> -->
                         </div>
                     </div>
                 </nav>
@@ -158,9 +182,9 @@
 
                                 <!-- 네비게이션 탭으로 display 상태 변화 -->
                                 <!-- 제품상세 탭 (기본화면) -->
-                                <div class="main-screen story-container">
+                                <div class="main-screen story-container on">
 
-                                    <!-- 상품상세에서 스크롤내리면 따라옴 -->
+                                    <!-- 스크롤 내리면 따라옴 -->
                                     <div class="section-tabs-wrapper">
                                         <ul class="section-tabs">
                                             <a class="section-tab active">상품 설명</a>
@@ -174,20 +198,73 @@
                                         <!-- 상품소개~환불정책 -->
                                         <div class="story-card-inner">
 
-                                            <!-- 아래의 더보기 누르면 max-height변함 -->
-                                            <div class="story-content">
+                                            <!-- 아래의 더보기 누르면 max-height none 으로 변함 -->
+                                            <div id="productIntro" class="story-content">
 
-                                                <!-- 더보기누르면 after가 사라지나? -->
+                                                <!-- 더보기누르면 after가 사라짐 -->
+                                                <!-- after: 상품더보기 누르기전에 max-height로 짤리는 부분을 흐리게 처리  -->
                                                 <div class="full-story-content-wrap">
-                                                    <div class="product-story">상품 소개</div>
-                                                    <div class="full-story-content">
+                                                    <div class="story-section-title">상품 소개</div>
 
+                                                    <!-- 소개이미지들 랩  -->
+                                                    <div class="story-content-img-wrap">
+                                                        <img src="../../../static/images/product-detail-예시/1.png" class="story-content-img">
+                                                        <img src="../../../static/images/product-detail-예시/2.png" class="story-content-img">
+                                                        <img src="../../../static/images/product-detail-예시/3.png" class="story-content-img">
+                                                        <img src="../../../static/images/product-detail-예시/4.png" class="story-content-img">
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- 상품 설명 전체보기 버튼 -->
+                                            <button type="button" class="show-all-info-btn">상품 소개 더보기
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 11.3335L2.66634 6.33353L3.73306 5.33349L7.99967 9.33342L12.2663 5.3335L13.333 6.33353L7.99967 11.3335Z" fill="#6D6D6D"></path></svg>
+                                            </button>
+
+                                            <!-- 판매자소개 -->
+                                            <div id="sellerIntro" class="seller-intro-wrap">
+                                                <div class="story-section-title">판매자 소개</div>
+                                                <!-- 소개이미지들 랩  -->
+                                                <div class="story-content-img-wrap">
+                                                    <img src="../../../static/images/store-detail-예시-seller/1.png" class="story-content-img">
+                                                    <img src="../../../static/images/store-detail-예시-seller/2.png" class="story-content-img">
+                                                </div>
+                                            </div>
+                                            <!-- 고객센터/환불/교환 안내 -->
+                                            <div id="refundExchangeIntro" class="refund-intro-wrap">
+                                                <div class="story-section-title">환불/교환 안내</div>
+                                                <div class="story-content-img-wrap">
+                                                    <img src="../../../static/images/product-detail-예시/5.png" class="story-content-img">
+                                                </div>
+                                                <div class="policy-wrap">
+                                                    <div class="section-policy">판매 정책</div>
+                                                    <div class="section-policy-content">1. 교환 & 환불 정책<br>- 판매자에 따르는 어쩌고 저쩌고<br><br>
+                                                        2. 배송정책<br>
+                                                        - 제주 및 도서산간 지역은 추가 배송비가 발생합니다. 기타 도서산간 지역은 배송 주소 취합 후 배송사 문의 후 추가 배송비 안내드려요. 추가 배송비 입금이 완료 되어야지 발송이 되는 점 양해 부탁드립니다!
+                                                    </div>
+                                                </div>
+                                                <div class="policy-wrap">
+                                                    <div class="section-policy">예상되는 어려움</div>
+                                                    <div class="section-policy-content">* 배송 중 분실/파손/오배송과 같은 사고 발생 시 배송이 지연 될 수 있습니다. 사고가 없다면 대부분 출고 후 1~2일안에 받으실 수 있습니다.
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="product-detail-wrap">
+                                                    <div></div>
+                                                </div> -->
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="report-btn-wrapper">
+                                        <button type="button" class="report-btn">
+                                            <div class="report-icon">
+                                                <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M35.8125 23.7746V30.338H12.1875V23.7746C12.1875 16.9139 17.4762 11.3521 24 11.3521C30.5239 11.3521 35.8125 16.9139 35.8125 23.7746ZM9.00004 23.7746C9.00004 15.0626 15.7158 8 24 8C32.2843 8 39 15.0626 39 23.7746V33.6901H9.00004V23.7746ZM39 36.6479H9V40H39V36.6479Z"></path><path d="M21.75 14.75C21.75 14.75 20 15 18.25 16.75C16.5 18.5 16 20.5 16 20.5L18.25 21.5C18.25 21.5 19 20 20.25 18.75C21.5 17.5 22.5 17 22.5 17L21.75 14.75Z"></path></svg>
+                                            </div>
+                                            <span>상품 신고</span>
+                                        </button>
+                                    </div>
                                 </div>
+                                
 
                                 <!-- 네비게이션 탭으로 display 상태 변화 -->
                                 <!-- 제품후기 탭 -->
@@ -868,9 +945,11 @@
 
                                 <!-- 네비게이션 탭으로 display 상태 변화 -->
                                 <!-- 구매자만 작성가능한 문의탭 -->
-                                <div class="main-screen community-container on">
+                                <!-- <div class="main-screen community-container">ddddddddd
                                     <div class="spacer-md"></div>
-                                </div>
+                                    <div class=""></div>
+                                    <div class=""></div>
+                                </div> -->
                             </div>
                         </div>
 
@@ -883,7 +962,7 @@
                                     <div class="seller-products-wrapper">
 
                                         <!-- 리뷰카드 -->
-                                        <div class="review-wrap">
+                                        <!-- <div class="review-wrap">
                                             <a href="https://tumblbug.com/u/glasody/review" class="review-info-wrap">
                                                 <div class="review-info-title">이 상점의 다른 상품 후기
                                                     <svg class="ReviewInfoWrap" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 9L7.87504 15L6.75 13.7999L11.2499 9L6.75 4.20005L7.87504 3L13.5 9Z" fill="#545454"></path></svg>
@@ -907,15 +986,14 @@
                                                         </div>
                                                         <div>
                                                             <div class="gandan-text">
-                                                            다른 두바이 초콜릿 주문했다가 난리 나서 취소하면서 좀 불안했는데, 역시 글라소디님은 다르시네요. 카다이프 씹는 맛은 처음이라 신기하고 피스타치오 맛도 분명히 느껴져요. 두바이 초콜릿은 이런 맛이었군요 ^^
-펀딩하실 때마다 항상 맛있는 디저트 감사히 받았답니다. 앞으로도 응원합니다!
-제가 사진은 잘 못 찍어서 달콤함이 사진에 다 담기질 않네요 ㅎㅎㅎ
+                                                            사이드바 옆에 보이는 리뷰카드에 보이는 간단리뷰에요 ~~~~~사이드바 옆에 보이는 리뷰카드에 보이는 간단리뷰에요 ~~~~~
+                                                            사이드바 옆에 보이는 리뷰카드에 보이는 간단리뷰에요 ~~~~~사이드바 옆에 보이는 리뷰카드에 보이는 간단리뷰에요 ~~~~~
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
                                         <!-- 오른쪽 판매자 정보 카드 -->
                                         <div class="seller-card-wrap">
@@ -967,9 +1045,78 @@
                                 <div class="sticker-container">
                                     <div class="sticker-wrapper">
 
-                                        <!-- 옵션 선택하면 innerHtml = 선택한 상품 ~ 이런식으로 -->
+                                        <!-- 옵션 선택하면 textContent = '선택한 상품' 으로 -->
                                         <div class="select-text">상품 선택</div>
 
+                                        <!-- 상품옵션 선택하면 나타나는 div(내가 선택한걸 보여줌) -->
+                                        <div class="selected-options-container">
+
+                                            <!-- 선택한 리스트들 나열 -->
+                                            <div class="selected-list-container">
+                                                <!-- 각 카트들 -->
+                                                <!-- <div class="each-cart-wrap">
+                                                    <div class="cart-item-name">js에서 제품이름</div>
+                                                    <div class="cart-info-wrap"> -->
+
+                                                        <!-- 카트에 상품구성? 설명?같은거 -->
+                                                        <!-- <div class="cart-option-explain"> -->
+
+                                                            <!-- li를 몇개해야할지 어떻게 알지 -->
+                                                            <!-- <li>
+                                                                <div class="cart-item-list">
+                                                                    <div class="cart-bullet">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="1.25" fill="#9E9E9E"></circle></svg>
+                                                                    </div>
+                                                                    <span>js에서 제품구성?설명?</span>
+                                                                    <span> 제품구성?설명?</span>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="cart-item-list">
+                                                                    <div class="cart-bullet">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="1.25" fill="#9E9E9E"></circle></svg>
+                                                                    </div>
+                                                                    <span>js에서 제품구성?설명?</span>
+                                                                    <span> 제품구성?설명?</span>
+                                                                </div>
+                                                            </li>
+                                                        </div>
+                                                        <div class="cart-qtt-price">
+                                                            <div class="qtt">
+                                                                <button disabled type="button">
+                                                                    <div name="minus" class="qtt-minus">
+                                                                        <svg viewBox="0 0 48 48"><path d="M6 24.1C6 22.9402 6.9402 22 8.1 22H39.9C41.0598 22 42 22.9402 42 24.1C42 25.2598 41.0598 26.2 39.9 26.2H8.1C6.9402 26.2 6 25.2598 6 24.1Z"></path></svg>
+                                                                    </div>
+                                                                </button>
+                                                                <input readonly type="number" value="1">
+                                                                <button type="button">
+                                                                    <div name="plus" class="qtt-plus">
+                                                                        <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M43.7104 21.8549H25.99V4.09524C25.99 2.89796 24.9945 2 23.9005 2C22.8054 2 21.81 2.89796 21.81 4.09524V21.9546H4.0905C2.89593 21.8549 2 22.8526 2 23.9501C2 25.0476 2.89593 26.0454 4.0905 26.0454H21.9095V43.9048C21.9095 45.0023 22.8054 46 23.999 46C25.095 46 26.0905 45.102 26.0905 43.9048V26.0454H43.9085C45.0045 26.0454 46 25.1474 46 23.9501C45.8009 22.8526 44.904 21.8549 43.7104 21.8549C43.7104 21.8549 43.81 21.8549 43.7104 21.8549Z"></path></svg>
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                            <div class="each-price">22500원</div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="delete-cart-btn">
+                                                        <div>
+                                                            <svg width="10" height="10" fill="#1C1C1C" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.28544 5.00257L2.01916 2.73642C1.82521 2.54248 1.82974 2.23083 2.01598 2.02765C2.21448 1.81131 2.5294 1.8394 2.72795 2.02108L2.72969 2.02268L4.99738 4.2905L7.26357 2.02431C7.4575 1.83056 7.7691 1.83508 7.97226 2.02115C8.1886 2.21946 8.16077 2.53473 7.97878 2.73311L7.97723 2.73479L5.70945 5.00257L7.97564 7.26876C8.16953 7.46283 8.16504 7.77425 7.97884 7.97756L7.97724 7.9793L7.97557 7.98097C7.78164 8.17472 7.47008 8.17023 7.26691 7.98417L7.26519 7.98259L4.99738 5.71465L2.73129 7.981C2.53725 8.17469 2.22572 8.17025 2.02253 7.98417L2.01908 7.98101L2.01592 7.97756C1.82971 7.77425 1.82526 7.46279 2.01916 7.26872L4.28544 5.00257Z"></path></svg>
+                                                        </div>
+                                                    </button>
+                                                </div> -->
+                                            </div>
+                                            <div class="divider-in-cart"></div>
+
+                                            <!-- 더담기랑 구매버튼 -->
+                                            <div class="cart-buttons-wrap">
+                                                <!-- <button type="button" class="get-more-btn">상품 더 담기</button> -->
+                                                <button type="button" class="cart-buy-btn">총
+                                                    <div class="total-price"></div> 구매하기
+                                                </button>
+                                            </div>
+                                        </div>
+
+
                                         <!-- 선택옵션 하나 -->
                                         <div class="each-product-option-wrap">
                                             <div class="each-product-option">
@@ -977,25 +1124,36 @@
                                                     <div class="each-option-card">
                                                         <div class="option-card">
                                                             <div class="option-price">
-                                                                <div class="price-wrap">22500원</div>
-                                                                <div class="option-name">망고청과 맛보기 세트</div>
+                                                                <div class="price-wrap">16000원</div>
+                                                                <div class="option-name">명품 나주 배 선물 세트 중과</div>
                                                             </div>
                                                             <ul class="option-explain">
                                                                 <li class="item-list">
-                                                                    <span>망고</span>
-                                                                    <span>(x1)</span>
+                                                                    <span>5kg</span>
+                                                                    <span>10~12과</span>
                                                                 </li>
+                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 선택옵션 하나 -->
+                                        <div class="each-product-option-wrap">
+                                            <div class="each-product-option">
+                                                <div class="each-option">
+                                                    <div class="each-option-card">
+                                                        <div class="option-card">
+                                                            <div class="option-price">
+                                                                <div class="price-wrap">32000원</div>
+                                                                <div class="option-name">명품 나주 배 선물 세트 대과</div>
+                                                            </div>
+                                                            <ul class="option-explain">
                                                                 <li class="item-list">
-                                                                    <span>포도</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>사과</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>배</span>
-                                                                    <span>(x1)</span>
+                                                                    <span>5kg</span>
+                                                                    <span>7과 내</span>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -1080,7 +1238,41 @@
                                                         <div class="option-card">
                                                             <div class="option-price">
                                                                 <div class="price-wrap">22500원</div>
-                                                                <div class="option-name">망고청과 맛보기 세트</div>
+                                                                <div class="option-name">망고청과 맛보기 세트2</div>
+                                                            </div>
+                                                            <ul class="option-explain">
+                                                                <li class="item-list">
+                                                                    <span>망고</span>
+                                                                    <span>(x2)</span>
+                                                                </li>
+                                                                <li class="item-list">
+                                                                    <span>포도</span>
+                                                                    <span>(x1)</span>
+                                                                </li>
+                                                                <li class="item-list">
+                                                                    <span>사과</span>
+                                                                    <span>(x1)</span>
+                                                                </li>
+                                                                <li class="item-list">
+                                                                    <span>배</span>
+                                                                    <span>(x1)</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 선택옵션 하나 -->
+                                        <div class="each-product-option-wrap">
+                                            <div class="each-product-option">
+                                                <div class="each-option">
+                                                    <div class="each-option-card">
+                                                        <div class="option-card">
+                                                            <div class="option-price">
+                                                                <div class="price-wrap">22500원</div>
+                                                                <div class="option-name">망고청과 맛보기 세트3</div>
                                                             </div>
                                                             <ul class="option-explain">
                                                                 <li class="item-list">
@@ -1114,75 +1306,7 @@
                                                         <div class="option-card">
                                                             <div class="option-price">
                                                                 <div class="price-wrap">22500원</div>
-                                                                <div class="option-name">망고청과 맛보기 세트</div>
-                                                            </div>
-                                                            <ul class="option-explain">
-                                                                <li class="item-list">
-                                                                    <span>망고</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>포도</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>사과</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>배</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- 선택옵션 하나 -->
-                                        <div class="each-product-option-wrap">
-                                            <div class="each-product-option">
-                                                <div class="each-option">
-                                                    <div class="each-option-card">
-                                                        <div class="option-card">
-                                                            <div class="option-price">
-                                                                <div class="price-wrap">22500원</div>
-                                                                <div class="option-name">망고청과 맛보기 세트</div>
-                                                            </div>
-                                                            <ul class="option-explain">
-                                                                <li class="item-list">
-                                                                    <span>망고</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>포도</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>사과</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                                <li class="item-list">
-                                                                    <span>배</span>
-                                                                    <span>(x1)</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- 선택옵션 하나 -->
-                                        <div class="each-product-option-wrap">
-                                            <div class="each-product-option">
-                                                <div class="each-option">
-                                                    <div class="each-option-card">
-                                                        <div class="option-card">
-                                                            <div class="option-price">
-                                                                <div class="price-wrap">22500원</div>
-                                                                <div class="option-name">망고청과 맛보기 세트</div>
+                                                                <div class="option-name">망고청과 맛보기 세트4</div>
                                                             </div>
                                                             <ul class="option-explain">
                                                                 <li class="item-list">
@@ -1225,7 +1349,7 @@
                             <div class="cards-wrapper">
                                 <div class="banner-container">
                                     <div class="banner-wrapper">
-                                        <div class="slide-banner">
+                                        <div class="similar-slide-banner">
                                             <div class="each-card-wrapper">
                                                 <div class="each-card">
                                                     <a href="https://www.naver.com" class="card-link-wrapper">
@@ -1272,7 +1396,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">20000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1298,7 +1422,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">30000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1324,7 +1448,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">40000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1350,7 +1474,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">50000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1376,7 +1500,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">60000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1402,7 +1526,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">70000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1428,7 +1552,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">80000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1454,7 +1578,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">90000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1480,7 +1604,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">100000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1491,14 +1615,14 @@
                                 </div>
 
                                 <!-- 왼쪽 슬라이드 버튼. 기본적으로 숨겨짐. 오른쪽으로 최소한번 슬라이드 되었을때 나타남 -->
-                                <button class="left-slide-btn">
+                                <button class="similar-left-slide-btn">
                                     <div class="left-arrow">
                                         <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.8912 45.3014L12 23.913L32.8912 2.52471C33.5866 1.8251 34.7804 1.8251 35.4777 2.52471C36.1741 3.22333 36.1741 4.42368 35.4777 5.22224L17.1731 23.913L35.4777 42.7018C36.1741 43.4024 36.1741 44.6018 35.4777 45.4013C35.0788 45.8011 34.6819 46 34.1845 46C33.7855 45.9011 33.2881 45.7002 32.8912 45.3014Z"></path></svg>
                                     </div>
                                 </button>
 
                                 <!-- 오른쪽 슬라이드 버튼 -->
-                                <button class="right-slide-btn">
+                                <button class="similar-right-slide-btn">
                                     <div class="right-arrow">
                                         <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.9071 46C13.4118 46 12.9164 45.8001 12.6192 45.4003C11.9257 44.7007 11.9257 43.5014 12.6192 42.7019L30.8493 24.0125L12.5201 5.22317C11.8266 4.52357 11.8266 3.32425 12.5201 2.5247C13.2136 1.8251 14.3034 1.8251 15.096 2.5247L36 24.0125L15.195 45.4003C14.7988 45.8001 14.3034 46 13.9071 46Z"></path></svg>
                                     </div>
@@ -1511,12 +1635,12 @@
                     <!-- 같이 구매한 상품 슬라이드 배너 -->
                      <div class="bought-with-container">
                         <div class="bought-with-wrapper">
-                            <div class="bought-with-text">이 상품과 비슷한 상품</div>
+                            <div class="bought-with-text">같이 구매한 상품</div>
                             <div class="cards-container">
                             <div class="cards-wrapper">
                                 <div class="banner-container">
                                     <div class="banner-wrapper">
-                                        <div class="slide-banner">
+                                        <div class="bought-with-slide-banner">
                                             <div class="each-card-wrapper">
                                                 <div class="each-card">
                                                     <a href="https://www.naver.com" class="card-link-wrapper">
@@ -1563,7 +1687,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">20000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1589,7 +1713,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">30000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1615,7 +1739,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">40000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1641,7 +1765,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">50000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1667,7 +1791,7 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">60000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -1693,103 +1817,26 @@
                                                                 <div class="product-title">
                                                                     <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
                                                                 </div>
-                                                                <div class="product-price">10000 원</div>
+                                                                <div class="product-price">70000 원</div>
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="each-card-wrapper">
-                                                <div class="each-card">
-                                                    <a href="https://www.naver.com" class="card-link-wrapper">
-                                                        <div class="image-box">
-                                                            <img class="card-image" src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzZhODg2ZjM2LTVmMzQtNDkyZC1hYmI5LWU0YTY3ZTE1MWNjYi80ZDJjZDFkYS1hMDI1LTQ0ZjYtYmQ4OS1lZDkyYWZkYTcwMzIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0NjUsImhlaWdodCI6NDY1LCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWUsImZpdCI6bnVsbH0sInJvdW5kQ3JvcCI6ZmFsc2UsInJvdGF0ZSI6bnVsbH19">
-                                                            <button class="like-button">
-                                                                <svg class="black-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.463 15.3087L19.9993 15.7933L20.5356 15.3087L22.2643 13.747C22.2643 13.747 22.2643 13.7469 22.2643 13.7469C23.615 12.5269 25.9852 12.7532 27.3097 14.2118L27.3156 14.2182L27.3216 14.2246C28.9912 15.9843 29.0145 19.0158 27.2167 20.9218L19.9995 27.9864L12.7818 20.9218C10.9839 19.0158 11.0075 15.984 12.6769 14.2246L12.6829 14.2182L12.6888 14.2118C14.0133 12.7532 16.3836 12.5269 17.7343 13.7469C17.7343 13.7469 17.7343 13.7469 17.7344 13.747L19.463 15.3087Z"fill="currentColor" fill-opacity="0.25" stroke="white"stroke-width="1.6"></path><g filter="url(#filter0_dd_909_4706012)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9992 17.111L17.0789 14.4725C17.0789 14.4725 17.079 14.4726 17.0789 14.4725C16.1903 13.67 14.4337 13.7447 13.4126 14.8691L13.3995 14.8835L13.3861 14.8976C12.0903 16.2633 12.039 18.6949 13.4805 20.2374L19.9994 26.6181L26.518 20.2374C27.9595 18.6949 27.9084 16.2637 26.6123 14.8976L26.5989 14.8835L26.5859 14.8691C25.5648 13.7447 23.8085 13.6699 22.9198 14.4725C22.9198 14.4725 22.9198 14.4724 22.9198 14.4725L19.9992 17.111ZM21.728 13.1533C23.4567 11.5918 26.3291 11.942 27.902 13.6739C29.8776 15.7563 29.8775 19.2796 27.7872 21.4827L19.9995 29.1058L12.2112 21.4827C10.1209 19.2796 10.121 15.7559 12.0965 13.6739C13.6694 11.942 16.5419 11.5917 18.2706 13.1533L19.9993 14.7151L21.728 13.1533Z"fill="white"></path></g><defs><filter id="filter0_dd_909_4706012" x="8.62891" y="10.1571"width="22.7422" height="20.9487"filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706012"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706012"result="effect2_dropShadow_909_4706012"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706012" result="shape"></feBlend></filter></defs></svg>
-                                                                <svg class="red-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dd_909_4706251)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9993 14.7154L18.2706 13.1536C16.5419 11.592 13.6694 11.9423 12.0965 13.6742C10.121 15.7562 10.1209 19.2799 12.2112 21.483L19.9995 29.1061L27.7872 21.483C29.8775 19.2799 29.8776 15.7566 27.902 13.6742C26.3291 11.9423 23.4567 11.5921 21.728 13.1536L19.9993 14.7154Z"fill="#F86453"></path></g><defs><filter id="filter0_dd_909_4706251" x="-2" y="-2" width="44"height="44" filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706251"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706251"result="effect2_dropShadow_909_4706251"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706251" result="shape"></feBlend></filter></defs></svg>
-                                                            </button>
-                                                        </div>
-                                                        <div class="card-content-wrapper">
-                                                            <div class="card-content">
-                                                                <div class="card-seller-name-wrapper">
-                                                                    <div class="card-seller-name">
-                                                                        <div>김망고</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-title">
-                                                                    <a href="" class="product-link">아래의 뱃지는 텍스트까지 하나의 svg에요</a>
-                                                                </div>
-                                                                <div class="product-price">10000 원</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="each-card-wrapper">
-                                                <div class="each-card">
-                                                    <a href="https://www.naver.com" class="card-link-wrapper">
-                                                        <div class="image-box">
-                                                            <img class="card-image" src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzZhODg2ZjM2LTVmMzQtNDkyZC1hYmI5LWU0YTY3ZTE1MWNjYi80ZDJjZDFkYS1hMDI1LTQ0ZjYtYmQ4OS1lZDkyYWZkYTcwMzIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0NjUsImhlaWdodCI6NDY1LCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWUsImZpdCI6bnVsbH0sInJvdW5kQ3JvcCI6ZmFsc2UsInJvdGF0ZSI6bnVsbH19">
-                                                            <button class="like-button">
-                                                                <svg class="black-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.463 15.3087L19.9993 15.7933L20.5356 15.3087L22.2643 13.747C22.2643 13.747 22.2643 13.7469 22.2643 13.7469C23.615 12.5269 25.9852 12.7532 27.3097 14.2118L27.3156 14.2182L27.3216 14.2246C28.9912 15.9843 29.0145 19.0158 27.2167 20.9218L19.9995 27.9864L12.7818 20.9218C10.9839 19.0158 11.0075 15.984 12.6769 14.2246L12.6829 14.2182L12.6888 14.2118C14.0133 12.7532 16.3836 12.5269 17.7343 13.7469C17.7343 13.7469 17.7343 13.7469 17.7344 13.747L19.463 15.3087Z"fill="currentColor" fill-opacity="0.25" stroke="white"stroke-width="1.6"></path><g filter="url(#filter0_dd_909_4706012)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9992 17.111L17.0789 14.4725C17.0789 14.4725 17.079 14.4726 17.0789 14.4725C16.1903 13.67 14.4337 13.7447 13.4126 14.8691L13.3995 14.8835L13.3861 14.8976C12.0903 16.2633 12.039 18.6949 13.4805 20.2374L19.9994 26.6181L26.518 20.2374C27.9595 18.6949 27.9084 16.2637 26.6123 14.8976L26.5989 14.8835L26.5859 14.8691C25.5648 13.7447 23.8085 13.6699 22.9198 14.4725C22.9198 14.4725 22.9198 14.4724 22.9198 14.4725L19.9992 17.111ZM21.728 13.1533C23.4567 11.5918 26.3291 11.942 27.902 13.6739C29.8776 15.7563 29.8775 19.2796 27.7872 21.4827L19.9995 29.1058L12.2112 21.4827C10.1209 19.2796 10.121 15.7559 12.0965 13.6739C13.6694 11.942 16.5419 11.5917 18.2706 13.1533L19.9993 14.7151L21.728 13.1533Z"fill="white"></path></g><defs><filter id="filter0_dd_909_4706012" x="8.62891" y="10.1571"width="22.7422" height="20.9487"filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706012"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706012"result="effect2_dropShadow_909_4706012"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706012" result="shape"></feBlend></filter></defs></svg>
-                                                                <svg class="red-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dd_909_4706251)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9993 14.7154L18.2706 13.1536C16.5419 11.592 13.6694 11.9423 12.0965 13.6742C10.121 15.7562 10.1209 19.2799 12.2112 21.483L19.9995 29.1061L27.7872 21.483C29.8775 19.2799 29.8776 15.7566 27.902 13.6742C26.3291 11.9423 23.4567 11.5921 21.728 13.1536L19.9993 14.7154Z"fill="#F86453"></path></g><defs><filter id="filter0_dd_909_4706251" x="-2" y="-2" width="44"height="44" filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706251"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706251"result="effect2_dropShadow_909_4706251"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706251" result="shape"></feBlend></filter></defs></svg>
-                                                            </button>
-                                                        </div>
-                                                        <div class="card-content-wrapper">
-                                                            <div class="card-content">
-                                                                <div class="card-seller-name-wrapper">
-                                                                    <div class="card-seller-name">
-                                                                        <div>김망고</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-title">
-                                                                    <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
-                                                                </div>
-                                                                <div class="product-price">10000 원</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="each-card-wrapper">
-                                                <div class="each-card">
-                                                    <a href="https://www.naver.com" class="card-link-wrapper">
-                                                        <div class="image-box">
-                                                            <img class="card-image" src="https://img.tumblbug.com/eyJidWNrZXQiOiJ0dW1ibGJ1Zy1pbWctcHJvZCIsImtleSI6ImNvdmVyLzZhODg2ZjM2LTVmMzQtNDkyZC1hYmI5LWU0YTY3ZTE1MWNjYi80ZDJjZDFkYS1hMDI1LTQ0ZjYtYmQ4OS1lZDkyYWZkYTcwMzIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0NjUsImhlaWdodCI6NDY1LCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWUsImZpdCI6bnVsbH0sInJvdW5kQ3JvcCI6ZmFsc2UsInJvdGF0ZSI6bnVsbH19">
-                                                            <button class="like-button">
-                                                                <svg class="black-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.463 15.3087L19.9993 15.7933L20.5356 15.3087L22.2643 13.747C22.2643 13.747 22.2643 13.7469 22.2643 13.7469C23.615 12.5269 25.9852 12.7532 27.3097 14.2118L27.3156 14.2182L27.3216 14.2246C28.9912 15.9843 29.0145 19.0158 27.2167 20.9218L19.9995 27.9864L12.7818 20.9218C10.9839 19.0158 11.0075 15.984 12.6769 14.2246L12.6829 14.2182L12.6888 14.2118C14.0133 12.7532 16.3836 12.5269 17.7343 13.7469C17.7343 13.7469 17.7343 13.7469 17.7344 13.747L19.463 15.3087Z"fill="currentColor" fill-opacity="0.25" stroke="white"stroke-width="1.6"></path><g filter="url(#filter0_dd_909_4706012)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9992 17.111L17.0789 14.4725C17.0789 14.4725 17.079 14.4726 17.0789 14.4725C16.1903 13.67 14.4337 13.7447 13.4126 14.8691L13.3995 14.8835L13.3861 14.8976C12.0903 16.2633 12.039 18.6949 13.4805 20.2374L19.9994 26.6181L26.518 20.2374C27.9595 18.6949 27.9084 16.2637 26.6123 14.8976L26.5989 14.8835L26.5859 14.8691C25.5648 13.7447 23.8085 13.6699 22.9198 14.4725C22.9198 14.4725 22.9198 14.4724 22.9198 14.4725L19.9992 17.111ZM21.728 13.1533C23.4567 11.5918 26.3291 11.942 27.902 13.6739C29.8776 15.7563 29.8775 19.2796 27.7872 21.4827L19.9995 29.1058L12.2112 21.4827C10.1209 19.2796 10.121 15.7559 12.0965 13.6739C13.6694 11.942 16.5419 11.5917 18.2706 13.1533L19.9993 14.7151L21.728 13.1533Z"fill="white"></path></g><defs><filter id="filter0_dd_909_4706012" x="8.62891" y="10.1571"width="22.7422" height="20.9487"filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706012"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706012"result="effect2_dropShadow_909_4706012"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706012" result="shape"></feBlend></filter></defs></svg>
-                                                                <svg class="red-heart" width="40" height="40" viewBox="0 0 40 40"fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dd_909_4706251)"><path fill-rule="evenodd" clip-rule="evenodd"d="M19.9993 14.7154L18.2706 13.1536C16.5419 11.592 13.6694 11.9423 12.0965 13.6742C10.121 15.7562 10.1209 19.2799 12.2112 21.483L19.9995 29.1061L27.7872 21.483C29.8775 19.2799 29.8776 15.7566 27.902 13.6742C26.3291 11.9423 23.4567 11.5921 21.728 13.1536L19.9993 14.7154Z"fill="#F86453"></path></g><defs><filter id="filter0_dd_909_4706251" x="-2" y="-2" width="44"height="44" filterUnits="userSpaceOnUse"color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="1"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix"result="effect1_dropShadow_909_4706251"></feBlend><feColorMatrix in="SourceAlpha" type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"></feColorMatrix><feOffset></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="effect1_dropShadow_909_4706251"result="effect2_dropShadow_909_4706251"></feBlend><feBlend mode="normal" in="SourceGraphic"in2="effect2_dropShadow_909_4706251" result="shape"></feBlend></filter></defs></svg>
-                                                            </button>
-                                                        </div>
-                                                        <div class="card-content-wrapper">
-                                                            <div class="card-content">
-                                                                <div class="card-seller-name-wrapper">
-                                                                    <div class="card-seller-name">
-                                                                        <div>김망고</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="product-title">
-                                                                    <a href="" class="product-link">제품상세(구매)로 이동해요. 위에 판매자 눌러도 여기가 판매자 페이지라 이동 안해요</a>
-                                                                </div>
-                                                                <div class="product-price">10000 원</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- 왼쪽 슬라이드 버튼. 기본적으로 숨겨짐. 오른쪽으로 최소한번 슬라이드 되었을때 나타남 -->
-                                <button class="left-slide-btn">
+                                <button class="bought-with-left-slide-btn">
                                     <div class="left-arrow">
                                         <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M32.8912 45.3014L12 23.913L32.8912 2.52471C33.5866 1.8251 34.7804 1.8251 35.4777 2.52471C36.1741 3.22333 36.1741 4.42368 35.4777 5.22224L17.1731 23.913L35.4777 42.7018C36.1741 43.4024 36.1741 44.6018 35.4777 45.4013C35.0788 45.8011 34.6819 46 34.1845 46C33.7855 45.9011 33.2881 45.7002 32.8912 45.3014Z"></path></svg>
                                     </div>
                                 </button>
 
                                 <!-- 오른쪽 슬라이드 버튼 -->
-                                <button class="right-slide-btn">
+                                <button class="bought-with-right-slide-btn">
                                     <div class="right-arrow">
                                         <svg viewBox="0 0 48 48"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.9071 46C13.4118 46 12.9164 45.8001 12.6192 45.4003C11.9257 44.7007 11.9257 43.5014 12.6192 42.7019L30.8493 24.0125L12.5201 5.22317C11.8266 4.52357 11.8266 3.32425 12.5201 2.5247C13.2136 1.8251 14.3034 1.8251 15.096 2.5247L36 24.0125L15.195 45.4003C14.7988 45.8001 14.3034 46 13.9071 46Z"></path></svg>
                                     </div>
@@ -1802,6 +1849,14 @@
             </div>
         </main>
     </div>
+    <div class="modal">
+        <div class="like-modal">
+            <div id="content-wrap">좋아하는 시장에 추가 되었습니다.</div>
+        </div>
+    </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="../../../static/js/product-detail.js"></script>
+<script src="../../../static/js/product-detail-card.js"></script>
+<script src="../../../static/js/product-detail-banner.js"></script>
 </html>
