@@ -34,3 +34,14 @@ test.addEventListener(
     },
     false,
 );
+
+const qrBtn = document.querySelector(".QRcode");
+const qrBox = document.getElementById("qrBox");
+
+qrBtn.addEventListener("click", () => {
+    if (qrBox.style.display === "none") {
+        qrBox.style.display = "block";
+    } else {
+        qrBox.style.display = "none";
+    }
+});
