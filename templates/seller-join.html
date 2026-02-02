@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>join-page</title>
+    <title>seller-join-page</title>
     <link rel="stylesheet" href="../static/css/join.css">
 </head>
 <body>
     <div class="JoinPage-Layout">
         <div class="JoinPage-Wrapper">
             <div class="JoinPage-Container">
-                <div class="JoinPage-ContentWrapper">
-                    <!--  -->
+                <!-- 판매자 회원가입 page 1  -->
+                <div class="JoinPage-ContentWrapper user-info">
                     <div class="JoinPage-HeaderWrapper">
                         <div class="JoinPage-Header">
-                            <p class="JoinPage-HeaderPage">회원가입</p>
+                            <p class="JoinPage-HeaderPage">판매자 회원가입</p>
                         </div>
                     </div>
                     <div class="JoinPage-BodyWrapper">
@@ -94,14 +94,58 @@
                     </div>
 
                     <div class="JoinPage-FooterWrapper">
+                        <button class="JoinPage-JoinButton" type="button">다음</button>
+                    </div>
+                </div>
+
+                <!-- 판매자 회원가입 page 2  -->
+                <div class="JoinPage-ContentWrapper seller-info off">
+                    <div class="JoinPage-HeaderWrapper">
+                        <div class="JoinPage-Header">
+                            <p class="JoinPage-HeaderPage">판매자 추가 정보</p>
+                        </div>
+                    </div>
+                    <div class="JoinPage-BodyWrapper">
+                        <form class="JoinPage-BodyContainer">
+                            <div name="bankName" class="JoinPage-InputWrapper">
+                                <label for="bankName" class="JoinPage-InputLabel">
+                                    <span>*</span>
+                                    은행명
+                                </label>
+                                <input class="JoinPage-Input" id="bankName" type="text" placeholder="은행명을 입력해주세요" autocomplete="off" autocapitalize="off">
+                            </div>
+                            <div name="accountHolerName" class="JoinPage-InputWrapper">
+                                <label for="accountHolerName" class="JoinPage-InputLabel">
+                                    <span>*</span>
+                                    예금주명
+                                </label>
+                                <input class="JoinPage-Input" id="accountHolerName" type="text" placeholder="연락처를 입력해주세요" autocomplete="off" autocapitalize="off">
+                                <span class="JoinPage-PassNotice">예금주의 이름을 입력해주세요.</span>
+                            </div>
+                            <div name="bankAccountNum" class="JoinPage-InputWrapper">
+                                <label for="bankAccountNum" class="JoinPage-InputLabel">
+                                    <span>*</span>
+                                    은행 계좌 번호
+                                </label>
+                                <input class="JoinPage-Input" id="bankAccountNum" type="password" placeholder="계좌번호를 입력해주세요" autocomplete="off" autocapitalize="off">
+                                <span class="JoinPage-PassNotice">은행 계좌 번호를 ' - ' 없이 입력해주세요.</span>
+                                <button class="JoinPage-EmailCheck off" type="button">
+                                    계좌 인증
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="JoinPage-FooterWrapper">
                         <button class="JoinPage-JoinButton" type="button">가입하기</button>
                     </div>
                 </div>
-                </div>
+
+                <!-- 페이지 오른쪽 이미지 -->
                 <div class="JoinPage-RightImage"></div>
             </div>
         </div>
      </div>
 </body>
-<script src="../static/js/join.js"></script>
+<script src="../static/js/seller-join.js"></script>
 </html>

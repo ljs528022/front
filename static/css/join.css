@@ -145,6 +145,14 @@
     padding-left: 4px;
 }
 
+.JoinPage-Timer {
+    position: absolute;
+    display: flex;
+    top: 12px;
+    right: 15px;
+    font-size: 15px;
+    color: rgb(255, 87, 87);
+}
 
 .JoinPage-FooterWrapper {
     display: flex;

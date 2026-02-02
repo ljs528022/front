@@ -1,3 +1,9 @@
+// 판매자 페이지 구분
+const firstPage = document.querySelector(".JoinPage-ContentWrapper.user-info");
+const secondPage = document.querySelector(
+    ".JoinPage-ContentWrapper.seller-info",
+);
+
 // input들
 const emailInput = document.getElementById("email");
 const emailChkInput = document.getElementById("emailChk");
@@ -5,28 +11,42 @@ const passInput = document.getElementById("password");
 const passChkInput = document.getElementById("passwordChk");
 const phoneInput = document.getElementById("phone");
 const nicknameInput = document.getElementById("nickname");
+const bankNameInput = document.getElementById("bankName");
+const bankAccountNumInput = document.getElementById("bankAccountNum");
+const accountHolerNameInput = document.getElementById("accountHolerName");
 
 // 이메일 인증코드 버튼
-const confirmBtn = document.querySelector(".JoinPage-EmailCheck");
+const confirmBtn = firstPage.querySelector(".JoinPage-EmailCheck");
 
 // 이메일 인증코드 입력란
-const confirmCodeInput = document.querySelector("div[name=emailChk]");
-const timerSpan = document.querySelector(".JoinPage-Timer");
+const confirmCodeInput = firstPage.querySelector("div[name=emailChk]");
+const timerSpan = firstPage.querySelector(".JoinPage-Timer");
 
-// 가입하기 버튼
-const joinBtn = document.querySelector(".JoinPage-JoinButton");
+// 계좌번호 인증 버튼
+const accountConfirmBtn = secondPage.querySelector(".JoinPage-EmailCheck");
+
+// 다음, 가입하기 버튼
+const nextBtn = firstPage.querySelector(".JoinPage-JoinButton");
+const joinBtn = secondPage.querySelector(".JoinPage-JoinButton");
 
 // 회원가입 정보 담는 변수
-let joinInfo = {
+let sellerJoinInfo = {
     email: "",
     password: "",
     phone: "",
     nickname: "",
 };
 
+let sellerBankInfo = {
+    bankName: "",
+    bankAccountNum: "",
+    accountHolerName: "",
+};
+
 // 확인용 값
 let emailChk = false;
 let passChk = false;
+let accountConfirm = false;
 
 // 이메일 정규식
 const regEmail =
@@ -87,7 +107,7 @@ emailChkInput.addEventListener("keyup", (e) => {
             confirmSpan.style.color = "rgb(99, 156, 99)";
             confirmSpan.innerHTML = "인증이 완료되었습니다.";
 
-            joinInfo.email = emailInput.value;
+            sellerJoinInfo.email = emailInput.value;
         } else {
             emailChkInput.style.border = "1px solid rgb(255, 87, 87)";
             confirmSpan.style.color = "rgb(255, 87, 87)";
@@ -155,7 +175,7 @@ passChkInput.addEventListener("keyup", (e) => {
             errorSpan.style.color = "rgb(99, 156, 99)";
             errorSpan.innerHTML = "비밀번호가 일치합니다.";
 
-            joinInfo.password = currentVal;
+            sellerJoinInfo.password = currentVal;
         } else {
             passChkInput.style.border = "1px solid rgb(255, 87, 87)";
             errorSpan.style.color = "rgb(255, 87, 87)";
@@ -189,7 +209,7 @@ phoneInput.addEventListener("keyup", (e) => {
         errorSpan.style.color = "rgb(99, 156, 99)";
         errorSpan.innerHTML = "올바른 전화번호 형식입니다.";
 
-        joinInfo.phone = e.target.value;
+        sellerJoinInfo.phone = e.target.value;
     } else {
         phoneInput.style.border = "1px solid rgb(255, 87, 87)";
         errorSpan.style.color = "rgb(255, 87, 87)";
@@ -200,14 +220,59 @@ phoneInput.addEventListener("keyup", (e) => {
 
 // 이름 입력란
 nicknameInput.addEventListener("keyup", (e) => {
-    joinInfo.nickname = e.target.value;
+    sellerJoinInfo.nickname = e.target.value;
 });
 
-// 가입하기 버튼 기능
-joinBtn.addEventListener("click", (e) => {
+// 은행명 입력란
+bankNameInput.addEventListener("keyup", (e) => {
+    sellerBankInfo.bankName = e.target.value;
+});
+
+// 계좌번호 입력란
+bankAccountNumInput.addEventListener("keyup", (e) => {
+    const userInput = e.target.value;
+    const regAccount = /^\d{10,16}$/;
+
+    const errorSpan = bankAccountNumInput.nextElementSibling;
+
+    if (regAccount.test(userInput)) {
+        bankAccountNumInput.style.border = "1px solid rgb(99, 156, 99)";
+        errorSpan.style.color = "rgb(99, 156, 99)";
+        errorSpan.innerHTML = "계좌번호 인증이 필요합니다.";
+
+        accountConfirmBtn.classList.remove("off");
+    } else {
+        bankAccountNumInput.style.border = "1px solid rgb(255, 87, 87)";
+        errorSpan.style.color = "rgb(255, 87, 87)";
+        errorSpan.innerHTML = "올바르지 않은 계좌번호 형식입니다";
+        return;
+    }
+});
+
+// 계좌번호 인증 버튼
+accountConfirmBtn.addEventListener("click", (e) => {
+    const errorSpan = bankAccountNumInput.nextElementSibling;
+
+    // 계좌 인증 api 필요함
+
+    // 성공하면 출력
+    alert("인증이 성공적으로 완료되었습니다.");
+    bankAccountNumInput.style.border = "1px solid rgb(99, 156, 99)";
+    errorSpan.style.color = "rgb(99, 156, 99)";
+    errorSpan.innerHTML = "인증이 완료되었습니다.";
+
+    sellerBankInfo.bankAccountNum = bankAccountNumInput.value;
+});
+
+accountHolerNameInput.addEventListener("keyup", (e) => {
+    sellerBankInfo.accountHolerName = e.target.value;
+});
+
+// 다음 버튼 기능
+nextBtn.addEventListener("click", (e) => {
     // 값이 모두 입력되었는지 검증하기
-    const isInvalid = Object.keys(joinInfo).some((key) => {
-        if (joinInfo[key] === "") {
+    const isInvalid = Object.keys(sellerJoinInfo).some((key) => {
+        if (sellerJoinInfo[key] === "") {
             const fieldNames = {
                 email: "이메일",
                 password: "비밀번호",
@@ -222,7 +287,31 @@ joinBtn.addEventListener("click", (e) => {
 
     if (isInvalid) return;
 
+    // 성공하면 다음 페이지로
+    firstPage.classList.add("off");
+    secondPage.classList.remove("off");
+});
+
+// 가입하기 버튼 기능
+joinBtn.addEventListener("click", (e) => {
+    // 값이 모두 입력되었는지 검증하기
+    const isInvalid = Object.keys(sellerBankInfo).some((key) => {
+        if (sellerBankInfo[key] === "") {
+            const fieldNames = {
+                bankName: "은행명",
+                bankAccountNum: "은행 계좌 번호",
+                accountHolerName: "예금주",
+            };
+            alert(`${fieldNames[key]} 항목이 완료되지 않았습니다.`);
+            return true;
+        }
+        return false;
+    });
+
+    if (isInvalid) return;
+
     // 여기에 가입 요청 로직 만들어야함.
+    // sellerJoinInfo, sellerBankInfo 두 값을 보내야 함
 
     // 성공하면 alert후 홈으로
     alert("회원가입에 성공했습니다.");
