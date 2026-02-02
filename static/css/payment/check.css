@@ -758,5 +758,19 @@ button, input:where([type=button]), input:where([type=reset]), input:where([type
 }
 /**/
 .QRcode {
-    width: 100%;
+    width: 150px;
+    font-size: 15px;
+    border:1px solid #e5e7eb;
+    margin-bottom: 20px;
+     margin-top: 20px;
+    background-color: white;
+  color: #545454;
+}
+
+.button{
+    margin-top: 100px;
+}
+
+.qr{
+    width: 24px;
 }
